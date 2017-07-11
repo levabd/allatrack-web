@@ -5,6 +5,17 @@
  */
 
 
+/* Custom font */
+
+@font-face {
+    font-family: 'Space Age';
+    src: url('../fonts/SpaceAge.eot');
+    src: url('../fonts/SpaceAge.eot?#iefix') format('embedded-opentype'), url('../fonts/SpaceAge.woff2') format('woff2'), url('../fonts/SpaceAge.woff') format('woff'), url('../fonts/SpaceAge.ttf') format('truetype'), url('../fonts/SpaceAge.svg#SpaceAge') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 /* Global Styles */
 
 html,
@@ -29,6 +40,13 @@ body {
     padding: 0;
     font-size: 4.5em;
     font-weight: 700;
+}
+
+.shadowed {
+    -webkit-filter: drop-shadow(2px 2px 5px rgba(6, 54, 156, 0.5));
+    filter: url(#drop-shadow);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=2, OffY=2, Color='#06369C')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=2, OffY=2, Color='#06369C')";
 }
 
 
@@ -152,13 +170,25 @@ a.navbar-brand {
     -o-background-size: cover;
 }
 
+.carousel-caption .company-name {
+    text-transform: uppercase;
+    font-family: 'Space Age';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 5rem;
+    color: #fff;
+    text-shadow: 1px 1px 10px #06369C, 1px 1px 10px #06369C;
+    padding-bottom: 50px;
+}
+
 .carousel-caption {
     bottom: auto;
-    top: 350px;
+    top: 120px;
 }
 
 .carousel-caption h3 {
     text-shadow: 1px 1px 10px #000, 1px 1px 10px #000;
+    font-weight: 300;
 }
 
 .carousel-caption .caption-h3 {
@@ -653,7 +683,7 @@ footer {
     }
     .carousel-caption {
         bottom: auto;
-        top: 160px;
+        top: 80px;
     }
     .element-item img {
         width: 320px;

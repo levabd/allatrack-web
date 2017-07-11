@@ -30,7 +30,7 @@
     $item.height($wHeight + 70 + 65);
     $item.addClass('full-screen');
 
-    $('.carousel img').each(function() {
+    $('.carousel img.img-fluid').each(function() {
         var $src = $(this).attr('src');
         var $color = $(this).attr('data-color');
         $(this).parent().css({
