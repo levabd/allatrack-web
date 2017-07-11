@@ -171,4 +171,42 @@
             $(this).parent().addClass('active');
         });
     });
+
+    // Feedback
+    $('body').on('click', '#feedback-popup button', function(e) {
+        e.preventDefault();
+        var form = $('#feedback-popup');
+        $.ajax({
+            url: "https://formspree.io/oleg@allatrack.com",
+            method: "POST",
+            data: {
+                name: form.find('input[name="name"]').val(),
+                email: form.find('input[name="email"]').val(),
+                message: form.find('textarea[name="message"]').val()
+            },
+            dataType: "json",
+            success: function() {
+                $('#modal-contact-form').modal('toggle');
+                bootbox.alert('<b>Thanks for contacting us!</b> <br />We will get back to you very soon.');
+            }
+        });
+    });
+
+    $('#feedback button').click(function(e) {
+        e.preventDefault();
+        var form = $('#feedback');
+        $.ajax({
+            url: "https://formspree.io/oleg@allatrack.com",
+            method: "POST",
+            data: {
+                name: form.find('input[name="name"]').val(),
+                email: form.find('input[name="email"]').val(),
+                message: form.find('textarea[name="message"]').val()
+            },
+            dataType: "json",
+            success: function() {
+                bootbox.alert('<b>Thanks for contacting us!</b> <br />We will get back to you very soon.');
+            }
+        });
+    })
 })();
