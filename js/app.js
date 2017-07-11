@@ -173,9 +173,20 @@
     });
 
     // Feedback
+    function isEmail(email) {
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        return regex.test(email);
+    }
+    
     $('body').on('click', '#feedback-popup button', function(e) {
         e.preventDefault();
         var form = $('#feedback-popup');
+        
+        if (!isEmail(form.find('input[name="email"]').val())) {
+            bootbox.alert("Please fill out the email address field correctly");
+            return false;
+        }
+        
         $.ajax({
             url: "https://formspree.io/oleg@allatrack.com",
             method: "POST",
@@ -195,6 +206,12 @@
     $('#feedback button').click(function(e) {
         e.preventDefault();
         var form = $('#feedback');
+        
+        if (!isEmail(form.find('input[name="email"]').val())) {
+            bootbox.alert("Please fill out the email address field correctly");
+            return false;
+        }
+        
         $.ajax({
             url: "https://formspree.io/oleg@allatrack.com",
             method: "POST",
