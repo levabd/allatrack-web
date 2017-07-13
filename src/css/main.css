@@ -698,7 +698,11 @@ footer {
     }
     .element-item img {
         width: 320px;
+		height: 320px;
     }
+	.tabinf {
+		height: 320px;
+	}
 }
 
 @media(max-width:768px) {
@@ -713,9 +717,13 @@ footer {
     }
     .element-item img {
         width: 235px;
+		height: 235px;
     }
 	.map-overlay-wrapper{
 		display:none;		
+	}
+	.tabinf {
+		height: 235px;
 	}
 }
 
