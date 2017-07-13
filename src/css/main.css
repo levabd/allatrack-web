@@ -742,5 +742,9 @@ footer {
 		}
 	.carousel-caption .caption-h3 {
 		font-size: 2.7rem;
-		}		
+		}	
+	.carousel-caption{
+		top:90px;	
+		margin:0 auto;
+	}	
 }
