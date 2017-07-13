@@ -734,4 +734,8 @@ footer {
 	.map-overlay-wrapper{
 		display:none;		
 	}
+	.carousel-caption img{
+		width:50%;
+		height:50%;
+	}
 }
