@@ -22,13 +22,13 @@
                                     <div class="cellinf">
                                         <div class="tabinf">
                                             <img :src="element.logo" :alt="element.img.alt">
-                                            <h4> {{element.title}} </h4>
+                                            <h4 v-html="$t(element.title)"></h4>
                                         </div>
                                     </div>
                                 </figcaption>
                             </figure>
                             <div>
-                                <span>{{element.bailiwick}}</span>
+                                <span v-html="element.bailiwick"></span>
                             </div>
                         </div>
                         <!-- /.box'-->
@@ -174,64 +174,66 @@
     }
 </style>
 <script>
-    import isotope from '../../node_modules/vueisotope/src/vue_isotope'
+  import isotope from 'vueisotope'
 
-    export default{
-        methods: {
-            filter: function (key) {
-                this.$refs.cpt.filter(key);
+  export default {
+    methods: {
+      filter: function (key) {
+        this.$refs.cpt.filter(key)
+      },
+      show (img) {
+        bootbox.alert({
+          message: `<div class="text-center" style="height: 700px; overflow-y: scroll;">
+                        <img width="100%" src="${img.src}" alt="${img.alt}">
+                    </div>`,
+          size: 'large'
+        })
+      }
+    },
+    data () {
+      return {
+        locale: 'en',
+        list: [
+          {
+            img: {
+              src: require('@/assets/img/media_system.png'),
+              alt: 'landing.recommendations.media_system.img.alt'
             },
-            show(img){
-                bootbox.alert({
-                    message: `<div class="text-center" style="height: 600px; overflow-y: scroll;"><img width="100%" src="${img.src}" alt="${img.alt}"></div>`,
-                    size: 'large'
-                })
+            title: 'landing.recommendations.media_system.title',
+            logo: require('@/assets/img/ms-partner-logo-white.png'),
+            bailiwick: 'Web development'
+          },
+          {
+            img: {
+              src: require('@/assets/img/dniprolab.jpg'),
+              alt: 'landing.recommendations.dniprolab.img.alt'
+            },
+            title: 'landing.recommendations.dniprolab.title',
+            logo: require('@/assets/img/logo-dniprolab.png'),
+            bailiwick: 'Web development'
+          }
+        ],
+        currentLayout: 'masonry',
+        selected: 'Show all',
+        sortOption: 'original-order',
+        filterOption: 'Show all',
+        option: {
+          itemSelector: '.box',
+          layoutMode: 'masonry',
+          masonry: {
+            columnWidth: 40,
+            isFitWidth: true
+          },
+          getFilterData: {
+            'Show all': function () {
+              return true
             }
-        },
-        data(){
-            return {
-                locale: 'en',
-                list: [
-                    {
-                        img: {
-                            src: require('@/assets/img/media_system.png'),
-                            alt: this.$root.$t('landing.recommendations.media_system.img.alt')
-                        },
-                        title: this.$root.$t('landing.recommendations.media_system.title'),
-                        logo: require('@/assets/img/ms-logo-white.png'),
-                        bailiwick: this.$root.$t('landing.services.web.title')
-                    },
-                    {
-                        img: {
-                            src: require('@/assets/img/dniprolab.jpg'),
-                            alt: this.$root.$t('landing.recommendations.dniprolab.img.alt')
-                        },
-                        title: this.$root.$t('landing.recommendations.dniprolab.title'),
-                        logo: require('@/assets/img/logo-dniprolab.png'),
-                        bailiwick: this.$root.$t('landing.services.science.title')
-                    }
-                ],
-                currentLayout: 'masonry',
-                selected: 'Show all',
-                sortOption: "original-order",
-                filterOption: "Show all",
-                option: {
-                    itemSelector: ".box",
-                    layoutMode: 'masonry',
-                    masonry: {
-                        columnWidth: 40,
-                        isFitWidth: true
-                    },
-                    getFilterData: {
-                        "Show all": function () {
-                            return true;
-                        }
-                    }
-                }
-            }
-        },
-        components: {
-            isotope
+          }
         }
+      }
+    },
+    components: {
+      isotope
     }
+  }
 </script>

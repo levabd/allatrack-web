@@ -23,7 +23,7 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
       'masonry': 'masonry-layout',
-      'isotope': 'isotope-layout'
+      'isotope': 'isotope-layout',
     }
   },
   module: {

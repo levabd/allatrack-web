@@ -16,4 +16,5 @@ selenium-debug.log
 *.sln
 
 tmp
+dev
 bash.exe.stackdump

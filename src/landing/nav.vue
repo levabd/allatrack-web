@@ -9,16 +9,21 @@
         <div class='collapse navbar-collapse' id='navbarNav'>
             <ul class='navbar-nav mx-auto'>
                 <li class='nav-item text-center'>
-                    <a class='nav-link' href='#' v-html="$t('landing.nav.home')"></a>
+                    <a class='nav-link' href='#top' v-html="$t('landing.nav.home')" @click.prevent="goTo"></a>
                 </li>
                 <li class='nav-item text-center'>
-                    <a class='nav-link' href='#solutions' v-html="$t('landing.nav.solutions')"></a>
+                    <a class='nav-link' href='#solutions' v-html="$t('landing.nav.solutions')"
+                       @click.prevent="goTo"></a>
                 </li>
                 <li class='nav-item text-center'>
-                    <a class='nav-link' href='#clients' v-html="$t('landing.nav.clients')"></a>
+                    <a class='nav-link' href='#clients' v-html="$t('landing.nav.clients')" @click.prevent="goTo"></a>
                 </li>
                 <li class='nav-item text-center'>
-                    <a class='nav-link' href='#contact' v-html="$t('landing.nav.contact')"></a>
+                    <a class='nav-link' href='#recommendations' v-html="$t('landing.nav.recommendations')"
+                       @click.prevent="goTo"></a>
+                </li>
+                <li class='nav-item text-center'>
+                    <a class='nav-link' href='#contact' v-html="$t('landing.nav.contact')" @click.prevent="goTo"></a>
                 </li>
                 <li class='nav-item text-center dropdown'>
                     <a class='nav-link dropdown-toggle'
@@ -27,12 +32,15 @@
                        data-toggle='dropdown'
                        aria-haspopup='true'
                        aria-expanded='false'
-                       v-html="$t('landing.nav.language')">
+                       v-html="$t('landing.nav.languages.'+languageModule.i18n.locale)">
                     </a>
                     <div class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
-                        <a class='dropdown-item' href='#' @click.prevent="languageModule.setLang('uk')" v-html="$t('landing.nav.languages.uk')"></a>
-                        <a class='dropdown-item' href='#' @click.prevent="languageModule.setLang('ru')" v-html="$t('landing.nav.languages.ru')"></a>
-                        <a class='dropdown-item' href='#' @click.prevent="languageModule.setLang('en')" v-html="$t('landing.nav.languages.en')"></a>
+                        <a class='dropdown-item' href='#' @click.prevent="languageModule.setLang('uk')"
+                           v-html="$t('landing.nav.languages.uk')"></a>
+                        <a class='dropdown-item' href='#' @click.prevent="languageModule.setLang('ru')"
+                           v-html="$t('landing.nav.languages.ru')"></a>
+                        <a class='dropdown-item' href='#' @click.prevent="languageModule.setLang('en')"
+                           v-html="$t('landing.nav.languages.en')"></a>
                     </div>
                 </li>
             </ul>
@@ -58,50 +66,41 @@
 </template>
 
 <script>
-    import languageModule from '../localizations'
+  import languageModule from '../localizations'
 
-    export default {
-        data(){
-            return {
-                languageModule: languageModule
-            }
-        },
-        mounted () {
+  export default {
+    data () {
+      return {
+        languageModule: languageModule
+      }
+    },
 
-            // Closes the sidebar menu
-            $("#menu-close").click(function (e) {
-                e.preventDefault();
-            });
-            // Opens the sidebar menu
-            $("#menu-toggle").click(function (e) {
-                e.preventDefault();
-            });
-
-            // Scrolls to the selected menu item on the page
-            $(function () {
-                $(`a[href*='#']:not([href='#'],[data-toggle],[data-target],[data-slide])`).click(function () {
-                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-                        var target = $(this.hash);
-                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                        if (target.length) {
-                            $('html,body').animate({
-                                scrollTop: target.offset().top - 60
-                            }, 1000);
-                            return false;
-                        }
-                    }
-                });
-
-                $(`ul.navbar-nav.mx-auto>li.nav-item.text-center:first`).click(function () {
-
-                        $('html,body').animate({
-                            scrollTop: 0
-                        }, 1000);
-                        return false;
-                });
-            });
+    methods: {
+      goTo (event) {
+        if (location.pathname.replace(/^\//, '') == event.target.pathname.replace(/^\//, '') || location.hostname == event.target.hostname) {
+          var target = $(event.target.hash)
+          target = target.length ? target : $('[name=' + event.target.hash.slice(1) + ']')
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top - 60
+            }, 1000)
+            return false
+          }
         }
+      }
+    },
+    mounted () {
+
+      // Closes the sidebar menu
+      $('#menu-close').click(function (e) {
+        e.preventDefault()
+      })
+      // Opens the sidebar menu
+      $('#menu-toggle').click(function (e) {
+        e.preventDefault()
+      })
     }
+  }
 </script>
 <style>
 

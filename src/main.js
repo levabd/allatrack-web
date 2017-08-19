@@ -3,6 +3,8 @@
 import Vue from 'vue'
 import App from './app'
 import Meta from 'vue-meta'
+import router from './router'
+
 import languageModule from './localizations'
 
 Vue.config.productionTip = false
@@ -12,7 +14,7 @@ const i18n = languageModule.i18n
 
 new Vue({
   el: '#app',
+  router,
   i18n,
-  template: '<App/>',
-  components: { App }
+  render: h => h(App)
 })

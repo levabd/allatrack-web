@@ -20,12 +20,6 @@ class LanguageModule {
       enumerable: true,
       configurable: true
     })
-    Object.defineProperty(this, 'I18N_PATH_ON_VIEW', {
-      value: 'nav.languages',
-      writable: false,
-      enumerable: true,
-      configurable: true
-    })
 
     Vue.use(VueI18n)
 
@@ -44,7 +38,23 @@ class LanguageModule {
 
   getInitialLanguage () {
 
-    var _lng = navigator.language || navigator.userLanguage || 'en';
+    var _lng ;
+
+    $.ajax({
+      url: "http://ip-api.com/json",
+      type: 'GET',
+      success: function(json) {
+        _lng = json.countryCode.toLowerCase()
+        console.log("My country code is:", json.countryCode)
+      },
+      error: function(err) {
+        console.log("Request failed, error = " + err)
+      }
+    })
+
+    if (!_lng) {
+      _lng = navigator.systemLanguage || navigator.language || navigator.userLanguage || 'en'
+    }
 
     // SNG iso codes
     // Order from TZ
