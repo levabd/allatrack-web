@@ -62,84 +62,84 @@
         list: [
           {
             img: {
-              src: require('@/assets/img/anti-bot.jpg'),
+              src: require('@/assets/img/anti-bot.jpg')
             },
             path: 'science',
             category: 'science'
           },
           {
             img: {
-              src: require('@/assets/img/cars.png'),
+              src: require('@/assets/img/cars.png')
             },
             path: 'cars',
             category: 'science'
           },
           {
             img: {
-              src: require('@/assets/img/lep.png'),
+              src: require('@/assets/img/lep.png')
             },
             path: 'lep',
             category: 'science hardware'
           },
           {
             img: {
-              src: require('@/assets/img/drone-traveler.png'),
+              src: require('@/assets/img/drone-traveler.png')
             },
             path: 'drone_traveler',
             category: 'science hardware development'
           },
           {
             img: {
-              src: require('@/assets/img/hepatitis.png'),
+              src: require('@/assets/img/hepatitis.png')
             },
             path: 'hepatitis',
             category: 'medical science'
           },
           {
             img: {
-              src: require('@/assets/img/trackandtrace.jpg'),
+              src: require('@/assets/img/trackandtrace.jpg')
             },
             path: 'trackandtrace',
             category: 'medical automation development'
           },
           {
             img: {
-              src: require('@/assets/img/cows.jpg'),
+              src: require('@/assets/img/cows.jpg')
             },
             path: 'cows',
             category: 'automation development'
           },
           {
             img: {
-              src: require('@/assets/img/receipts.jpg'),
+              src: require('@/assets/img/receipts.jpg')
             },
             path: 'receipts',
             category: 'automation development'
           },
           {
             img: {
-              src: require('@/assets/img/agriculture.png'),
+              src: require('@/assets/img/agriculture.png')
             },
             path: 'agriculture',
             category: 'automation development'
           },
           {
             img: {
-              src: require('@/assets/img/smartmeter.png'),
+              src: require('@/assets/img/smartmeter.png')
             },
             path: 'smartmeter',
             category: 'automation hardware development'
           },
           {
             img: {
-              src: require('@/assets/img/cardio.png'),
+              src: require('@/assets/img/cardio.png')
             },
             path: 'cardio',
             category: 'medical science hardware'
           },
           {
             img: {
-              src: require('@/assets/img/ultrasound.jpg'),
+              src: require('@/assets/img/ultrasound.jpg')
             },
             path: 'ultrasound',
             category: 'medical science hardware'
@@ -180,7 +180,7 @@
       }
     },
     components: {
-      isotope:isotope
+      isotope: isotope
     }
   }
 </script>

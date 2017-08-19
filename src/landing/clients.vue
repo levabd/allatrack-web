@@ -30,25 +30,24 @@
     </section>
 </template>
 <script>
-    import flexisel from '../assets/js/jquery.flexisel'
+  import '../assets/js/jquery.flexisel'
 
-    export default{
-        mounted(){
-            $("#clientsCarousel").flexisel({
-                visibleItems: 5,
-                itemsToScroll: 1,
-                autoPlay: {
-                    enable: true,
-                    interval: 5000,
-                    pauseOnHover: true
-                }
-            })
+  export default {
+    mounted () {
+      $('#clientsCarousel').flexisel({
+        visibleItems: 5,
+        itemsToScroll: 1,
+        autoPlay: {
+          enable: true,
+          interval: 5000,
+          pauseOnHover: true
         }
+      })
     }
+  }
 </script>
 <style>
     .clients {
         margin: 20px 0;
     }
-
 </style>

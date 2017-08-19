@@ -176,6 +176,7 @@
 <script>
   import isotope from 'vueisotope'
 
+  /* global bootbox */
   export default {
     methods: {
       filter: function (key) {

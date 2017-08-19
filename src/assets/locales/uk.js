@@ -21,7 +21,7 @@ const uk = {
       title: 'Напишіть нам',
       description: 'Маєте питання? Напишіть нам.',
       inputs: {
-        name: "Iм'я *",
+        name: 'Iм\'я *',
         email: 'Email або телефон *',
         message: 'Питання *'
       },
@@ -149,21 +149,20 @@ const uk = {
         description: 'Портативний багатоцільовий сенсор із можливістю підключення до смартфону (iOS або Android) через USB-роз\'єм C типу.'
       }
     },
-    recommendations:{
+    recommendations: {
       title: 'Нас рекомендують',
-      media_system:{
+      media_system: {
         img: {
           alt: 'MS Smart group'
         },
         title: 'MS Smart group'
       },
-      dniprolab:{
+      dniprolab: {
         img: {
           alt: 'Dneprolab medical laboratories'
         },
         title: 'Dneprolab medical laboratories'
       }
-
     }
   }
 }

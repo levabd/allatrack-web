@@ -1,5 +1,4 @@
 
-
 export default {
   // if no subcomponents specify a metaInfo.title, this title will be used
   title: 'Allatrack',

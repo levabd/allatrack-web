@@ -29,58 +29,58 @@
     </form>
 </template>
 <script>
-    export default{
-        props:['id'],
-        data(){
-            return {
-                name: '',
-                email: '',
-                message: ''
-            }
-        },
-        methods: {
-            isEmail(email) {
-                var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-                return regex.test(email);
-            },
-            send(){
-
-                if (!this.isEmail(this.email)) {
-                    bootbox.alert("Please fill out the email address field correctly");
-                    return;
-                }
-
-                if (!this.name) {
-                    bootbox.alert("Please fill out the name field correctly");
-                    return;
-                }
-
-                if (!this.message) {
-                    bootbox.alert("Please fill out the message field correctly");
-                    return;
-                }
-
-                let vm = this;
-                $.ajax({
-                    url: "https://formspree.io/oleg@allatrack.com",
-                    method: "POST",
-                    data: {
-                        name: this.name,
-                        email: this.email,
-                        message: this.message
-                    },
-                    dataType: "json",
-                    success: function () {
-                        if ($('#modal-contact-form').is(':visible')) {
-                            $('#modal-contact-form').modal('toggle');
-                        }
-                        bootbox.alert('<b>Thanks for contacting us!</b> <br />We will get back to you very soon.');
-                        vm.name= '';
-                        vm.email= '';
-                        vm.message= '';
-                    }
-                });
-            }
+  /* global bootbox */
+  export default {
+    props: ['id'],
+    data () {
+      return {
+        name: '',
+        email: '',
+        message: ''
+      }
+    },
+    methods: {
+      isEmail (email) {
+        var regex = /^([a-zA-Z0-9_.+-])+\\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/
+        return regex.test(email)
+      },
+      send () {
+        if (!this.isEmail(this.email)) {
+          bootbox.alert('Please fill out the email address field correctly')
+          return
         }
+
+        if (!this.name) {
+          bootbox.alert('Please fill out the name field correctly')
+          return
+        }
+
+        if (!this.message) {
+          bootbox.alert('Please fill out the message field correctly')
+          return
+        }
+
+        let vm = this
+        $.ajax({
+          url: 'https://formspree.io/oleg@allatrack.com',
+          method: 'POST',
+          data: {
+            name: this.name,
+            email: this.email,
+            message: this.message
+          },
+          dataType: 'json',
+          success: function () {
+            if ($('#modal-contact-form').is(':visible')) {
+              $('#modal-contact-form').modal('toggle')
+            }
+            bootbox.alert('<b>Thanks for contacting us!</b> <br />We will get back to you very soon.')
+            vm.name = ''
+            vm.email = ''
+            vm.message = ''
+          }
+        })
+      }
     }
+  }
 </script>

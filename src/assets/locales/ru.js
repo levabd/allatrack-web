@@ -149,21 +149,20 @@ const ru = {
         description: 'Портативный многофункциональный датчик с возможностью подключения к смартфону (iOS или Android) с помощью разъема типа USB.'
       }
     },
-    recommendations:{
+    recommendations: {
       title: 'Нас рекомендуют',
-      media_system:{
+      media_system: {
         img: {
           alt: 'MS Smart group'
         },
         title: 'MS Smart group'
       },
-      dniprolab:{
+      dniprolab: {
         img: {
           alt: 'Dneprolab medical laboratories'
         },
         title: 'Dneprolab medical laboratories'
       }
-
     }
   }
 }
