@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './app'
 import Meta from 'vue-meta'
 import router from './router'
+import methods from './methods'
 
 import languageModule from './localizations'
 
@@ -16,5 +17,6 @@ new Vue({
   el: '#app',
   router,
   i18n,
-  render: h => h(App)
+  render: h => h(App),
+  methods: methods
 })
