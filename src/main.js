@@ -13,10 +13,12 @@ Vue.use(Meta)
 
 const i18n = languageModule.i18n
 
-new Vue({
+const app = new Vue({
   el: '#app',
   router,
   i18n,
   render: h => h(App),
   methods: methods
 })
+
+export default app

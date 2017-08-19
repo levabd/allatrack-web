@@ -6,19 +6,19 @@
             <div class="footer-menu col-sm-2">
                 <ul style="min-width: 160px;">
                     <li>
-                        <a href="#top" @click.prevent="goTo" v-html="$t('landing.nav.home')"></a>
+                        <a href="#top" @click.prevent="$root.goTo" v-html="$t('landing.nav.home')"></a>
                     </li>
                     <li>
-                        <a href="#solutions" @click.prevent="goTo" v-html="$t('landing.nav.solutions')"></a>
+                        <a href="#solutions" @click.prevent="$root.goTo" v-html="$t('landing.nav.solutions')"></a>
                     </li>
                     <li>
-                        <a href="#clients" @click.prevent="goTo" v-html="$t('landing.nav.clients')"></a>
+                        <a href="#clients" @click.prevent="$root.goTo" v-html="$t('landing.nav.clients')"></a>
                     </li>
                     <li>
-                        <a href='#recommendations' @click.prevent="goTo" v-html="$t('landing.nav.recommendations')"></a>
+                        <a href='#recommendations' @click.prevent="$root.goTo" v-html="$t('landing.nav.recommendations')"></a>
                     </li>
                     <li>
-                        <a href="#contact" @click.prevent="goTo" v-html="$t('landing.nav.contact')"></a>
+                        <a href="#contact" @click.prevent="$root.goTo" v-html="$t('landing.nav.contact')"></a>
                     </li>
                 </ul>
             </div>
@@ -73,20 +73,6 @@
     },
     components: {
       ContactForm
-    },
-    methods: {
-      goTo (event) {
-        if (location.pathname.replace(/^\//, '') == event.target.pathname.replace(/^\//, '') || location.hostname == event.target.hostname) {
-          var target = $(event.target.hash)
-          target = target.length ? target : $('[name=' + event.target.hash.slice(1) + ']')
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top - 60
-            }, 1000)
-            return false
-          }
-        }
-      }
     }
   }
 </script>

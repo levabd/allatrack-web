@@ -30,7 +30,7 @@ const en = {
     header: {
       science: {
         title: 'Data analysis and Hi-end computer vision',
-        description: 'Our consultancy and training solutions combine innovation and experience to unlock the business benefits of machine learning. ',
+        description: 'Our consultancy and training solutions combine innovation and experience to unlock the business benefits of machine learning. '
       },
       hardware: {
         title: 'Hardware integrations',
@@ -163,7 +163,6 @@ const en = {
         },
         title: 'Dneprolab medical laboratories'
       }
-
     }
   }
 }

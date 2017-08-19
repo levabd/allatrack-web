@@ -25,7 +25,8 @@
                         </h3>
                         <br/>
                         <div class='next-icon' data-animation='animated bounceInUp'>
-                            <a href='#solutions' @click.prevent="$root.goTo"><span class='fa-stack fa-lg'><i class='fa fa-stack-2x fa-angle-down'></i></span></a>
+                            <a href='#solutions' @click.prevent="$root.goTo"><span class='fa-stack fa-lg'><i
+                                    class='fa fa-stack-2x fa-angle-down'></i></span></a>
                         </div>
                     </div>
                 </div>
@@ -91,136 +92,128 @@
     </header>
 </template>
 <script>
+  export default {
+    props: ['windowHeight'],
+    mounted () {
+      // Base carousel
+      var $item = $('.carousel .carousel-item')
+      var $wHeight = this.windowHeight || $(window).height()
+      $item.eq(0).addClass('active')
+      $item.height($wHeight + 70 + 65)
+      $item.addClass('full-screen')
 
+      $('.carousel img.img-fluid').each(function () {
+        var $src = $(this).attr('src')
+        var $color = $(this).attr('data-color')
+        $(this).parent().css({
+          'background-image': 'url(' + $src + ')',
+          'background-color': $color
+        })
+        $(this).remove()
+      })
 
-    export default{
-        props: ['windowHeight'],
-        mounted(){
+      // Resize first images
+      $(window).on('resize', function () {
+        $wHeight = $(window).height()
+        $item.height($wHeight)
+      })
 
-            // Base carousel
-            var $item = $('.carousel .carousel-item');
-            var $wHeight = this.windowHeight || $(window).height();
-            $item.eq(0).addClass('active');
-            $item.height($wHeight + 70 + 65);
-            $item.addClass('full-screen');
+      $('.nav-link').hover(function () {
+        $(this).css('color', '#fff')
+      })
 
-            $('.carousel img.img-fluid').each(function () {
-                var $src = $(this).attr('src');
-                var $color = $(this).attr('data-color');
-                $(this).parent().css({
-                    'background-image': 'url(' + $src + ')',
-                    'background-color': $color
-                });
-                $(this).remove();
-            });
+      $('.nav-brand').hover(function () {
+        $(this).css('color', '#fff')
+      })
 
-            // Resize first images
-            $(window).on('resize', function () {
-                $wHeight = $(window).height();
-                $item.height($wHeight);
-            });
-
-            $(".nav-link").hover(function () {
-                $(this).css("color", "#fff")
-            });
-
-            $(".nav-brand").hover(function () {
-                $(this).css("color", "#fff")
-            });
-
-            // Scrolling navbar effects
-            var fixed = false;
-            $(document).scroll(function () {
-                if ($(this).scrollTop() > 250) {
-                    if (!fixed) {
-                        fixed = true;
-                        $('#navbar').css({
-                            "background-color": '#fff',
-                            "border-bottom": 'thin solid rgba(40, 40, 40, .3)'
-                        });
-                        $('#navbarNav').css({
-                            "border-left": 'thin solid rgba(40, 40, 40, .3)'
-                        });
-                        $('.socials:before').css({
-                            "border-left": 'thin solid rgba(40, 40, 40, .3)'
-                        });
-                        $('.socials').addClass("socials-black");
-                        $('#navbar').addClass("navbar-light");
-                        $('#navbar').removeClass("navbar-inverse");
-                        $('.navbar .navbar-nav .nav-link, .navbar-brand').css({
-                            color: '#333'
-                        })
-
-                        $(".nav-link").hover(function (e) {
-                            $(this).css("color", "#333")
-                        })
-
-                        $(".nav-brand").hover(function (e) {
-                            $(this).css("color", "#333")
-                        })
-
-                    }
-                } else {
-                    if (fixed) {
-                        fixed = false;
-                        $('#navbar').css({
-                            "background-color": 'transparent',
-                            "border-bottom": 'thin solid rgba(255, 255, 255, .3)'
-                        });
-                        $('#navbarNav').css({
-                            "border-left": 'thin solid rgba(255, 255, 255, .3)'
-                        });
-                        $('.socials').removeClass("socials-black");
-                        $('#navbar').addClass("navbar-inverse");
-                        $('#navbar').removeClass("navbar-light");
-                        $('.navbar .navbar-nav .nav-link, .navbar-brand').css({
-                            color: '#fff'
-                        })
-
-                        $(".nav-link").hover(function (e) {
-                            $(this).css("color", "#fff")
-                        })
-
-                        $(".nav-brand").hover(function (e) {
-                            $(this).css("color", "#fff")
-                        })
-                    }
-                }
-            });
-
-            // Carousel animations
-            function doAnimations(elems) {
-                var animEndEv = 'webkitAnimationEnd animationend';
-
-                elems.each(function () {
-                    var $this = $(this),
-                            $animationType = $this.data('animation');
-
-                    // Add `.css classes to
-                    // the elements to be animated
-                    // Remove animate.css classes
-                    // once the animation event has ended
-                    $this.addClass($animationType).one(animEndEv, function () {
-                        $this.removeClass($animationType);
-                    });
-                });
-            }
-
-            var $firstAnimatingElems = $('#carouselIndicators').find('.item:first').find('[data-animation ^= "animated"]');
-
-            doAnimations($firstAnimatingElems);
-
-            // Carousel
-            $('#carouselIndicators').on('slide.bs.carousel', function (e) {
-                var $animatingElems = $(e.relatedTarget).find("[data-animation ^= 'animated']");
-                doAnimations($animatingElems);
+      // Scrolling navbar effects
+      var fixed = false
+      $(document).scroll(function () {
+        if ($(this).scrollTop() > 250) {
+          if (!fixed) {
+            fixed = true
+            $('#navbar').css({
+              'background-color': '#fff',
+              'border-bottom': 'thin solid rgba(40, 40, 40, .3)'
+            })
+            $('#navbarNav').css({
+              'border-left': 'thin solid rgba(40, 40, 40, .3)'
+            })
+            $('.socials:before').css({
+              'border-left': 'thin solid rgba(40, 40, 40, .3)'
+            })
+            $('.socials').addClass('socials-black')
+            $('#navbar').addClass('navbar-light')
+            $('#navbar').removeClass('navbar-inverse')
+            $('.navbar .navbar-nav .nav-link, .navbar-brand').css({
+              color: '#333'
             })
 
+            $('.nav-link').hover(function (e) {
+              $(this).css('color', '#333')
+            })
+
+            $('.nav-brand').hover(function (e) {
+              $(this).css('color', '#333')
+            })
+          }
+        } else {
+          if (fixed) {
+            fixed = false
+            $('#navbar').css({
+              'background-color': 'transparent',
+              'border-bottom': 'thin solid rgba(255, 255, 255, .3)'
+            })
+            $('#navbarNav').css({
+              'border-left': 'thin solid rgba(255, 255, 255, .3)'
+            })
+            $('.socials').removeClass('socials-black')
+            $('#navbar').addClass('navbar-inverse')
+            $('#navbar').removeClass('navbar-light')
+            $('.navbar .navbar-nav .nav-link, .navbar-brand').css({
+              color: '#fff'
+            })
+
+            $('.nav-link').hover(function (e) {
+              $(this).css('color', '#fff')
+            })
+
+            $('.nav-brand').hover(function (e) {
+              $(this).css('color', '#fff')
+            })
+          }
         }
+      })
+
+      // Carousel animations
+      function doAnimations (elems) {
+        elems.each(function () {
+          let $this = $(this)
+          let $animationType = $this.data('animation')
+
+          // Add `.css classes to
+          // the elements to be animated
+          // Remove animate.css classes
+          // once the animation event has ended
+          $this.addClass($animationType).one('webkitAnimationEnd animationend', function () {
+            $this.removeClass($animationType)
+          })
+        })
+      }
+
+      let $carouselIndicators = $('#carouselIndicators')
+
+      doAnimations($carouselIndicators.find('.item:first').find('[data-animation ^= "animated"]'))
+
+      // Carousel
+      $carouselIndicators.on('slide.bs.carousel', function (e) {
+        var $animatingElems = $(e.relatedTarget).find('[data-animation ^= \'animated\']')
+        doAnimations($animatingElems)
+      })
     }
+  }
 </script>
 <style>
-
     .next-icon i {
         display: inline-block;
         -webkit-border-radius: 42px;
