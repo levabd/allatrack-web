@@ -3,11 +3,12 @@ const en = {
   address: '50 Gaydara St. 2-nd porch',
   country_code: 'Kiev 01033 Ukraine',
   landing: {
-    clients: 'Our clients',
+    clients: 'Our Clients',
     nav: {
-      home: 'Home',
+      home: 'LandingHome',
       solutions: 'Solutions',
-      clients: 'Our clients',
+      clients: 'Clients',
+      recommendations: 'Recommendations',
       contact: 'Contact us',
       language: 'Language',
       languages: {
@@ -148,15 +149,15 @@ const en = {
         description: 'Portable multi-purpose sensor with the ability to connect to a smartphone (iOS or Android) by USB type C connector.'
       }
     },
-    recommendations:{
-      title: 'Our recommendations',
-      media_system:{
+    recommendations: {
+      title: 'Our Recommendations',
+      media_system: {
         img: {
           alt: 'MS Smart group'
         },
         title: 'MS Smart group'
       },
-      dniprolab:{
+      dniprolab: {
         img: {
           alt: 'Dneprolab medical laboratories'
         },
@@ -165,7 +166,6 @@ const en = {
 
     }
   }
-
 }
 
 export default en

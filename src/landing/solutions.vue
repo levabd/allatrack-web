@@ -24,17 +24,18 @@
                              @sort="sortOption=arguments[0]"
                              @layout="currentLayout=arguments[0]"
                              class="row grid">
-
                         <div v-for="element,index in list"
                              :class='[element.category]'
                              :key="index">
                             <figure>
-                                <img :src="element.img.src" :alt="element.img.alt">
+                                <img :src="element.img.src"
+                                     :alt="$t('landing.solutions.'+element.path+'.img.alt')"
+                                >
                                 <figcaption>
                                     <div class="cellinf">
                                         <div class="tabinf">
-                                            <h3> {{element.title}} </h3>
-                                            {{ element.description }}
+                                            <h3 v-html="$t('landing.solutions.'+element.path+'.title')"></h3>
+                                            <p v-html="$t('landing.solutions.'+element.path+'.description')"></p>
                                         </div>
                                     </div>
                                 </figcaption>
@@ -53,159 +54,135 @@
 
 </template>
 <script>
-    import isotope from '../../node_modules/vueisotope/src/vue_isotope'
+  import isotope from 'vueisotope'
 
-    export default{
-        data(){
-           return {
-                locale: 'en',
-                list: [
-                    {
-                        img: {
-                            src: require('@/assets/img/anti-bot.jpg'),
-                            alt: this.$root.$t('landing.solutions.science.img.alt')
-                        },
-                        title: this.$root.$t('landing.solutions.science.title'),
-                        description: this.$root.$t('landing.solutions.science.description'),
-                        category: "science"
-                    },
-                    {
-                        img: {
-                            src: require('@/assets/img/cars.png'),
-                            alt: this.$root.$t('landing.solutions.cars.img.alt')
-                        },
-                        title: this.$root.$t('landing.solutions.cars.title'),
-                        description:this.$root.$t('landing.solutions.cars.description'),
-                        category: "science"
-                    },
-                    {
-                        img: {
-                            src: require('@/assets/img/lep.png'),
-                            alt: this.$root.$t('landing.solutions.lep.img.alt')
-                        },
-                        title: this.$root.$t('landing.solutions.lep.title'),
-                        description:this.$root.$t('landing.solutions.lep.description'),
-                        category: "science hardware"
-                    },
-                    {
-                        img: {
-                            src: require('@/assets/img/drone-traveler.png'),
-                            alt:this.$root.$t('landing.solutions.drone_traveler.img.alt')
-                        },
-                        title:this.$root.$t('landing.solutions.drone_traveler.title'),
-                        description:this.$root.$t('landing.solutions.drone_traveler.description'),
-                        category: "science hardware development"
-                    },
-                    {
-                        img: {
-                            src: require('@/assets/img/hepatitis.png'),
-                            alt: this.$root.$t('landing.solutions.hepatitis.img.alt')
-                        },
-                        title:this.$root.$t('landing.solutions.hepatitis.title'),
-                        description:this.$root.$t('landing.solutions.hepatitis.description'),
-                        category: "medical science"
-                    },
-                    {
-                        img: {
-                            src: require('@/assets/img/trackandtrace.jpg'),
-                            alt:this.$root.$t('landing.solutions.trackandtrace.img.alt')
-                        },
-                        title: this.$root.$t('landing.solutions.trackandtrace.title'),
-                        description:this.$root.$t('landing.solutions.trackandtrace.description'),
-                        category:  "medical automation development"
-                    },
-                    {
-                        img: {
-                            src: require('@/assets/img/cows.jpg'),
-                            alt:this.$root.$t('landing.solutions.cows.img.alt')
-                        },
-                        title: this.$root.$t('landing.solutions.cows.title'),
-                        description: this.$root.$t('landing.solutions.cows.description'),
-                        category: "automation development"
-                    },
-                    {
-                        img: {
-                            src: require('@/assets/img/receipts.jpg'),
-                            alt:this.$root.$t('landing.solutions.receipts.img.alt')
-                        },
-                        title:this.$root.$t('landing.solutions.receipts.title'),
-                        description: this.$root.$t('landing.solutions.receipts.description'),
-                        category: "automation development"
-                    },
-                    {
-                        img: {
-                            src: require('@/assets/img/agriculture.png'),
-                            alt:this.$root.$t('landing.solutions.agriculture.img.alt')
-                        },
-                        title:this.$root.$t('landing.solutions.agriculture.title'),
-                        description:this.$root.$t('landing.solutions.agriculture.description'),
-                        category: "automation development"
-                    },
-                    {
-                        img: {
-                            src: require('@/assets/img/smartmeter.png'),
-                            alt:this.$root.$t('landing.solutions.smartmeter.img.alt')
-                        },
-                        description:this.$root.$t('landing.solutions.smartmeter.description'),
-                        category: "automation hardware development"
-                    },
-                    {
-                        img: {
-                            src: require('@/assets/img/cardio.png'),
-                            alt:this.$root.$t('landing.solutions.cardio.img.alt')
-                        },
-                        title:this.$root.$t('landing.solutions.cardio.title'),
-                        description: this.$root.$t('landing.solutions.cardio.description'),
-                        category: "medical science hardware"
-                    },
-                    {
-                        img: {
-                            src: require('@/assets/img/ultrasound.jpg'),
-                            alt: this.$root.$t('landing.solutions.ultrasound.img.alt')
-                        },
-                        title: this.$root.$t('landing.solutions.ultrasound.title'),
-                        description: this.$root.$t('landing.solutions.ultrasound.description'),
-                        category: "medical science hardware"
-                    }
-                ],
-                currentLayout: 'masonry',
-                selected: 'Show all',
-                sortOption: "original-order",
-                filterOption: "Show all",
-                option: {
-                    itemSelector: ".element-item",
-                    getFilterData: {
-                        "Show all": function () {
-                            return true;
-                        },
-                        "Data Science": function (el) {
-                            return el.category.search("science")!==-1;
-                        },
-                        "Medical": function (el) {
-                            return el.category.search("medical")!==-1;
-                        },
-                        "Hardware": function (el) {
-                            return el.category.search("hardware")!==-1;
-                        },
-                        "Mobile & Web": function (el) {
-                            return el.category.search('development')!==-1;
-                        },
-                        "ERP & Automation": function (el) {
-                            return el.category.search('automation')!==-1;
-                        }
-                    }
-                }
+  export default {
+    data () {
+      return {
+        list: [
+          {
+            img: {
+              src: require('@/assets/img/anti-bot.jpg'),
+            },
+            path: 'science',
+            category: 'science'
+          },
+          {
+            img: {
+              src: require('@/assets/img/cars.png'),
+            },
+            path: 'cars',
+            category: 'science'
+          },
+          {
+            img: {
+              src: require('@/assets/img/lep.png'),
+            },
+            path: 'lep',
+            category: 'science hardware'
+          },
+          {
+            img: {
+              src: require('@/assets/img/drone-traveler.png'),
+            },
+            path: 'drone_traveler',
+            category: 'science hardware development'
+          },
+          {
+            img: {
+              src: require('@/assets/img/hepatitis.png'),
+            },
+            path: 'hepatitis',
+            category: 'medical science'
+          },
+          {
+            img: {
+              src: require('@/assets/img/trackandtrace.jpg'),
+            },
+            path: 'trackandtrace',
+            category: 'medical automation development'
+          },
+          {
+            img: {
+              src: require('@/assets/img/cows.jpg'),
+            },
+            path: 'cows',
+            category: 'automation development'
+          },
+          {
+            img: {
+              src: require('@/assets/img/receipts.jpg'),
+            },
+            path: 'receipts',
+            category: 'automation development'
+          },
+          {
+            img: {
+              src: require('@/assets/img/agriculture.png'),
+            },
+            path: 'agriculture',
+            category: 'automation development'
+          },
+          {
+            img: {
+              src: require('@/assets/img/smartmeter.png'),
+            },
+            path: 'smartmeter',
+            category: 'automation hardware development'
+          },
+          {
+            img: {
+              src: require('@/assets/img/cardio.png'),
+            },
+            path: 'cardio',
+            category: 'medical science hardware'
+          },
+          {
+            img: {
+              src: require('@/assets/img/ultrasound.jpg'),
+            },
+            path: 'ultrasound',
+            category: 'medical science hardware'
+          }
+        ],
+        currentLayout: 'masonry',
+        selected: 'Show all',
+        sortOption: 'original-order',
+        filterOption: 'Show all',
+        option: {
+          itemSelector: '.element-item',
+          getFilterData: {
+            'Show all': function () {
+              return true
+            },
+            'Data Science': function (el) {
+              return el.category.search('science') !== -1
+            },
+            'Medical': function (el) {
+              return el.category.search('medical') !== -1
+            },
+            'Hardware': function (el) {
+              return el.category.search('hardware') !== -1
+            },
+            'Mobile & Web': function (el) {
+              return el.category.search('development') !== -1
+            },
+            'ERP & Automation': function (el) {
+              return el.category.search('automation') !== -1
             }
-        },
-        methods: {
-            filter: function (key) {
-                this.$refs.cpt.filter(key);
-            }
-        },
-        components: {
-            isotope
+          }
         }
+      }
+    },
+    methods: {
+      filter: function (key) {
+        this.$refs.cpt.filter(key)
+      }
+    },
+    components: {
+      isotope:isotope
     }
+  }
 </script>
 <style>
     .solutions {

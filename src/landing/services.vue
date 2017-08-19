@@ -14,9 +14,9 @@
                                 <i class="fa fa-magic fa-stack-1x text-white"></i>
                             </span>
                                 <h4>
-                                    <strong  v-html="$t('landing.services.vision.title')"></strong>
+                                    <strong v-html="$t('landing.services.vision.title')"></strong>
                                 </h4>
-                                <p  v-html="$t('landing.services.vision.title')"></p>
+                                <p v-html="$t('landing.services.vision.description')"></p>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
@@ -26,9 +26,9 @@
                                 <i class="fa fa-line-chart fa-stack-1x text-white"></i>
                             </span>
                                 <h4>
-                                    <strong  v-html="$t('landing.services.science.title')"></strong>
+                                    <strong v-html="$t('landing.services.science.title')"></strong>
                                 </h4>
-                                <p  v-html="$t('landing.services.science.title')"></p>
+                                <p v-html="$t('landing.services.science.description')"></p>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
@@ -38,9 +38,9 @@
                                 <i class="fa fa-heartbeat fa-stack-1x text-white"></i>
                             </span>
                                 <h4>
-                                    <strong  v-html="$t('landing.services.hardware.title')"></strong>
+                                    <strong v-html="$t('landing.services.hardware.title')"></strong>
                                 </h4>
-                                <p  v-html="$t('landing.services.hardware.title')"></p>
+                                <p v-html="$t('landing.services.hardware.description')"></p>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">

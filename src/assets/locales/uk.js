@@ -3,11 +3,12 @@ const uk = {
   address: 'Гайдара 50',
   country_code: 'Київ 01033 Україна',
   landing: {
-    clients: 'Наші партнери',
+    clients: 'Наші клієнти',
     nav: {
       home: 'Додому',
       solutions: 'Рішення',
       clients: 'Наші кліенти',
+      recommendations: 'Нас рекомендують',
       contact: 'Контакти',
       language: 'Мова',
       languages: {
@@ -42,7 +43,6 @@ const uk = {
       previous: 'Попередній',
       next: 'Далі'
     },
-
     services: {
       title: 'Наші Послуги',
       vision: {

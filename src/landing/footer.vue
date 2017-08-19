@@ -4,26 +4,29 @@
             <div class="col-sm-4">
             </div>
             <div class="footer-menu col-sm-2">
-                <ul>
+                <ul style="min-width: 160px;">
                     <li>
-                        <a href="#top" v-html="$t('landing.nav.home')"></a>
+                        <a href="#top" @click.prevent="goTo" v-html="$t('landing.nav.home')"></a>
                     </li>
                     <li>
-                        <a href="#solutions" v-html="$t('landing.nav.solutions')"></a>
+                        <a href="#solutions" @click.prevent="goTo" v-html="$t('landing.nav.solutions')"></a>
                     </li>
                     <li>
-                        <a href="#clients" v-html="$t('landing.nav.clients')"></a>
+                        <a href="#clients" @click.prevent="goTo" v-html="$t('landing.nav.clients')"></a>
                     </li>
                     <li>
-                        <a href="#contact" v-html="$t('landing.nav.contact')"></a>
+                        <a href='#recommendations' @click.prevent="goTo" v-html="$t('landing.nav.recommendations')"></a>
+                    </li>
+                    <li>
+                        <a href="#contact" @click.prevent="goTo" v-html="$t('landing.nav.contact')"></a>
                     </li>
                 </ul>
             </div>
             <div class="footer-contact col-sm-4">
                 <span v-html="$t('country_code')"></span>
                 <span v-html="$t('address')"></span>
-                <span>{{ $t('phone') }}<a href="tel:380960081844">+380 (96) 008-18-44</a></span>
-                <span>Email: <a href="mailto: hello@allatrack.com">hello@allatrack.com</a></span>
+                <span>{{ $t('phone') }}<a href="tel:380960081844"> +380 (96) 008-18-44</a></span>
+                <span>Email:<a href="mailto: hello@allatrack.com"> hello@allatrack.com</a></span>
             </div>
             <div class="col-sm-2">
             </div>
@@ -37,7 +40,10 @@
         <div class="modal fade" id="modal-contact-form" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                    <button type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"><span
                             aria-hidden="true">×</span></button>
                     <div class="modal-body">
                         <!--contact form-->
@@ -57,15 +63,30 @@
 </template>
 
 <script>
-    import ContactForm from '../components/contact-form.vue'
-    export default {
-        computed: {
-            currentYear () {
-                return new Date().getFullYear();
-            }
-        },
-        components:{
-            ContactForm
+  import ContactForm from '../components/contact-form.vue'
+
+  export default {
+    computed: {
+      currentYear () {
+        return new Date().getFullYear()
+      }
+    },
+    components: {
+      ContactForm
+    },
+    methods: {
+      goTo (event) {
+        if (location.pathname.replace(/^\//, '') == event.target.pathname.replace(/^\//, '') || location.hostname == event.target.hostname) {
+          var target = $(event.target.hash)
+          target = target.length ? target : $('[name=' + event.target.hash.slice(1) + ']')
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top - 60
+            }, 1000)
+            return false
+          }
         }
+      }
     }
+  }
 </script>

@@ -3,11 +3,12 @@ const ru = {
   address: 'Гайдара 50',
   country_code: 'Киев 01033 Украина',
   landing: {
-    clients: 'Наши партнеры',
+    clients: 'Наши клиенты',
     nav: {
       home: 'Домой',
       solutions: 'Решения',
       clients: 'Наши клиенты',
+      recommendations: 'Нас рекомендуют',
       contact: ' Контакты',
       language: 'Язык',
       languages: {
