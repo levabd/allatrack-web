@@ -25,7 +25,7 @@
                         </h3>
                         <br/>
                         <div class='next-icon' data-animation='animated bounceInUp'>
-                            <a href='#solutions'><span class='fa-stack fa-lg'><i class='fa fa-stack-2x fa-angle-down'></i></span></a>
+                            <a href='#solutions' @click.prevent="$root.goTo"><span class='fa-stack fa-lg'><i class='fa fa-stack-2x fa-angle-down'></i></span></a>
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                         </h3>
                         <br/>
                         <div class='next-icon' data-animation='animated bounceInUp'>
-                            <a href='#solutions'><span class='fa-stack fa-lg'><i
+                            <a href='#solutions' @click.prevent="$root.goTo"><span class='fa-stack fa-lg'><i
                                     class='fa fa-stack-2x fa-angle-down'></i></span></a>
                         </div>
                     </div>
@@ -70,8 +70,11 @@
                         </h3>
                         <br/>
                         <div class='next-icon' data-animation='animated bounceInUp'>
-                            <a href='#solutions'><span class='fa-stack fa-lg'><i
-                                    class='fa fa-stack-2x fa-angle-down'></i></span></a>
+                            <a href='#solutions' @click.prevent="$root.goTo">
+                                <span class='fa-stack fa-lg'>
+                                    <i class='fa fa-stack-2x fa-angle-down'></i>
+                                </span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -88,6 +91,7 @@
     </header>
 </template>
 <script>
+
 
     export default{
         props: ['windowHeight'],

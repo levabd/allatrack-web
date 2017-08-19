@@ -9,21 +9,21 @@
         <div class='collapse navbar-collapse' id='navbarNav'>
             <ul class='navbar-nav mx-auto'>
                 <li class='nav-item text-center'>
-                    <a class='nav-link' href='#top' v-html="$t('landing.nav.home')" @click.prevent="goTo"></a>
+                    <a class='nav-link' href='#top' v-html="$t('landing.nav.home')" @click.prevent="$root.goTo"></a>
                 </li>
                 <li class='nav-item text-center'>
                     <a class='nav-link' href='#solutions' v-html="$t('landing.nav.solutions')"
-                       @click.prevent="goTo"></a>
+                       @click.prevent="$root.goTo"></a>
                 </li>
                 <li class='nav-item text-center'>
-                    <a class='nav-link' href='#clients' v-html="$t('landing.nav.clients')" @click.prevent="goTo"></a>
+                    <a class='nav-link' href='#clients' v-html="$t('landing.nav.clients')" @click.prevent="$root.goTo"></a>
                 </li>
                 <li class='nav-item text-center'>
                     <a class='nav-link' href='#recommendations' v-html="$t('landing.nav.recommendations')"
-                       @click.prevent="goTo"></a>
+                       @click.prevent="$root.goTo"></a>
                 </li>
                 <li class='nav-item text-center'>
-                    <a class='nav-link' href='#contact' v-html="$t('landing.nav.contact')" @click.prevent="goTo"></a>
+                    <a class='nav-link' href='#contact' v-html="$t('landing.nav.contact')" @click.prevent="$root.goTo"></a>
                 </li>
                 <li class='nav-item text-center dropdown'>
                     <a class='nav-link dropdown-toggle'
@@ -72,21 +72,6 @@
     data () {
       return {
         languageModule: languageModule
-      }
-    },
-
-    methods: {
-      goTo (event) {
-        if (location.pathname.replace(/^\//, '') == event.target.pathname.replace(/^\//, '') || location.hostname == event.target.hostname) {
-          var target = $(event.target.hash)
-          target = target.length ? target : $('[name=' + event.target.hash.slice(1) + ']')
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top - 60
-            }, 1000)
-            return false
-          }
-        }
       }
     },
     mounted () {
