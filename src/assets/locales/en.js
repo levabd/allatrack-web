@@ -5,12 +5,11 @@ const en = {
   landing: {
     clients: 'Our Clients',
     nav: {
-      home: 'LandingHome',
+      home: 'Home',
       solutions: 'Solutions',
       clients: 'Clients',
       recommendations: 'Recommendations',
       contact: 'Contact us',
-      language: 'Language',
       languages: {
         uk: 'Укр',
         ru: 'Рус',

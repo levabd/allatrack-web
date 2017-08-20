@@ -1,24 +1,45 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import App from './app'
+import App from '@/app'
 import Meta from 'vue-meta'
-import router from './router'
-import methods from './methods'
+import router from '@/router'
+import methods from '@/methods'
+import LanguageModule from '@/assets/js/LanguageModule'
 
-import languageModule from './localizations'
+/* eslint-disable no-new */
+const initApp = (countryCode) => {
+  Vue.config.productionTip = false
+  Vue.use(Meta)
+  Vue.use(LanguageModule)
 
-Vue.config.productionTip = false
-Vue.use(Meta)
+  return new Vue({
+    el: '#app',
+    methods: methods,
+    router: router,
+    i18n: new LanguageModule({
+      locale: LanguageModule.getLangByLogic(countryCode),
+      fallbackLocale: 'en',
+      messages: {
+        uk: require('@/assets/locales/uk').default,
+        ru: require('@/assets/locales/ru').default,
+        en: require('@/assets/locales/en').default
+      }
+    }),
+    render: h => h(App)
+  })
+}
 
-const i18n = languageModule.i18n
+let app = null
+const run = async function () {
+  try {
+    app = initApp(await LanguageModule.getCountryCode())
+  } catch (err) {
+    console.log(err)
+    app = initApp('en')
+  }
+}
 
-const app = new Vue({
-  el: '#app',
-  router,
-  i18n,
-  render: h => h(App),
-  methods: methods
-})
+run()
 
 export default app
