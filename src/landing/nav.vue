@@ -4,8 +4,13 @@
                 data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
             <span class='navbar-toggler-icon'></span>
         </button>
-        <a href='#' class='navbar-brand'><img src='../assets/img/favicon-32x32.png' width='32' height='32'
-                                              class='d-inline-block'/>Allatrack</a>
+        <a href='#' class='navbar-brand'>
+            <img src='../assets/img/favicon-32x32.png'
+                 width='32'
+                 height='32'
+                 class='d-inline-block'/>
+            Allatrack
+        </a>
         <div class='collapse navbar-collapse' id='navbarNav'>
             <ul class='navbar-nav mx-auto'>
                 <li class='nav-item text-center'>
@@ -32,14 +37,14 @@
                        data-toggle='dropdown'
                        aria-haspopup='true'
                        aria-expanded='false'
-                       v-html="$t('landing.nav.languages.'+languageModule.i18n.locale)">
+                       v-html="$t('landing.nav.languages.' + $i18n.locale)">
                     </a>
                     <div class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
-                        <a class='dropdown-item' href='#' @click.prevent="languageModule.setLang('uk')"
+                        <a class='dropdown-item' href='#' @click.prevent="$i18n.setLocale('uk')"
                            v-html="$t('landing.nav.languages.uk')"></a>
-                        <a class='dropdown-item' href='#' @click.prevent="languageModule.setLang('ru')"
+                        <a class='dropdown-item' href='#' @click.prevent="$i18n.setLocale('ru')"
                            v-html="$t('landing.nav.languages.ru')"></a>
-                        <a class='dropdown-item' href='#' @click.prevent="languageModule.setLang('en')"
+                        <a class='dropdown-item' href='#' @click.prevent="$i18n.setLocale('en')"
                            v-html="$t('landing.nav.languages.en')"></a>
                     </div>
                 </li>
@@ -64,16 +69,8 @@
         </div>
     </nav>
 </template>
-
 <script>
-  import languageModule from '../localizations'
-
   export default {
-    data () {
-      return {
-        languageModule: languageModule
-      }
-    },
     mounted () {
       // Closes the sidebar menu
       $('#menu-close').click(function (e) {
