@@ -9,7 +9,7 @@ describe('nav.vue', () => {
   const i18n = new LanguageModule({
     locale: 'en',
     messages: {
-      uk: require('@/assets/locales/uk').default,
+      ua: require('@/assets/locales/ua').default,
       ru: require('@/assets/locales/ru').default,
       en: require('@/assets/locales/en').default
     }

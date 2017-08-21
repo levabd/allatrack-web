@@ -20,14 +20,14 @@ describe('Allatrack i18n module', () => {
       expect(LanguageModule.getLangByLogic(code)).to.equal('ru')
     })
   })
-  it('Module method getLangByLogic returns uk if uk given', () => {
+  it('Module method getLangByLogic returns ua if ua given', () => {
     deleteCookie(LanguageModule.ALLATRACK_LNG_COOKIE)
-    expect(LanguageModule.getLangByLogic('uk')).to.equal('uk')
+    expect(LanguageModule.getLangByLogic('ua')).to.equal('ua')
   })
   it('Module method getLangByLogic stores in cookie after choice', () => {
     deleteCookie(LanguageModule.ALLATRACK_LNG_COOKIE)
-    LanguageModule.getLangByLogic('uk')
-    expect(getCookie(LanguageModule.ALLATRACK_LNG_COOKIE)).to.equal('uk')
+    LanguageModule.getLangByLogic('ua')
+    expect(getCookie(LanguageModule.ALLATRACK_LNG_COOKIE)).to.equal('ua')
   })
   it('Module method getCountryCode return valid country code', async () => {
     const result = await LanguageModule.getCountryCode()
@@ -44,7 +44,7 @@ describe('Allatrack i18n module', () => {
         locale: LanguageModule.getLangByLogic(countryCode),
         fallbackLocale: 'en',
         messages: {
-          uk: require('@/assets/locales/uk').default,
+          ua: require('@/assets/locales/ua').default,
           ru: require('@/assets/locales/ru').default,
           en: require('@/assets/locales/en').default
         }
@@ -55,9 +55,9 @@ describe('Allatrack i18n module', () => {
     languageModule.setLocale('ru')
     expect(languageModule.t('phone')).to.equal('Телефон:')
     expect(getCookie(LanguageModule.ALLATRACK_LNG_COOKIE)).to.equal('ru')
-    languageModule.setLocale('uk')
+    languageModule.setLocale('ua')
     expect(languageModule.t('phone')).to.equal('Телефон:')
-    expect(getCookie(LanguageModule.ALLATRACK_LNG_COOKIE)).to.equal('uk')
+    expect(getCookie(LanguageModule.ALLATRACK_LNG_COOKIE)).to.equal('ua')
     languageModule.setLocale('en')
     expect(languageModule.t('phone')).to.equal('Phone:')
     expect(getCookie(LanguageModule.ALLATRACK_LNG_COOKIE)).to.equal('en')

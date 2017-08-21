@@ -8,9 +8,9 @@
                     <hr class="small">
                     <div class="row menu">
                         <ul id="filters">
-                            <li v-for="(val, key) in option.getFilterData" :class="[key===filterOption? 'active' : '']">
+                            <li v-for="(val, key) in getFilterTitles" :class="[key===filterOption? 'active' : '']">
                                 <a href="#" @click.prevent="filter(key)">
-                                    {{key}}
+                                    {{ $t(val)}}
                                 </a>
                             </li>
                         </ul>
@@ -55,7 +55,6 @@
 </template>
 <script>
   import isotope from 'vueisotope'
-
   export default {
     data () {
       return {
@@ -171,6 +170,14 @@
               return el.category.search('automation') !== -1
             }
           }
+        },
+        getFilterTitles: {
+          'Show all': 'landing.show_all',
+          'Data Science': 'landing.show_science',
+          'Medical': 'landing.show_medical',
+          'Hardware': 'landing.show_hardware',
+          'Mobile & Web': 'landing.show_mobile',
+          'ERP & Automation': 'landing.show_automation'
         }
       }
     },

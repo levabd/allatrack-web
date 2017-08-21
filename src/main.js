@@ -2,7 +2,6 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './app'
-import Meta from 'vue-meta'
 import router from './router'
 import methods from './methods'
 import LanguageModule from '@/assets/js/LanguageModule'
@@ -10,9 +9,7 @@ import LanguageModule from '@/assets/js/LanguageModule'
 /* eslint-disable no-new */
 const initApp = (countryCode) => {
   Vue.config.productionTip = false
-  Vue.use(Meta)
   Vue.use(LanguageModule)
-
   new Vue({
     el: '#app',
     methods: methods,
@@ -21,7 +18,7 @@ const initApp = (countryCode) => {
       locale: LanguageModule.getLangByLogic(countryCode),
       fallbackLocale: 'en',
       messages: {
-        uk: require('@/assets/locales/uk').default,
+        ua: require('@/assets/locales/ua').default,
         ru: require('@/assets/locales/ru').default,
         en: require('@/assets/locales/en').default
       }
