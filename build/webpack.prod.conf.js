@@ -9,7 +9,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 var PrerenderSpaPlugin = require('prerender-spa-plugin')
-let FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+var OfflinePlugin = require('offline-plugin')
 
 var env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
@@ -109,11 +109,10 @@ var webpackConfig = merge(baseWebpackConfig, {
       // Absolute path to compiled SPA
       path.join(__dirname, '../'),
       // List of routes to prerender
-      [ '/'],
-      {
-        captureAfterTime: 500
-      }
-    )
+      ['/'],
+      {captureAfterTime: 500}
+    ),
+    new OfflinePlugin(),
   ]
 })
 
