@@ -40,8 +40,8 @@
                        v-html="$t('landing.nav.languages.' + $i18n.locale)">
                     </a>
                     <div class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
-                        <a class='dropdown-item' href='#' @click.prevent="$i18n.setLocale('uk')"
-                           v-html="$t('landing.nav.languages.uk')"></a>
+                        <a class='dropdown-item' href='#' @click.prevent="$i18n.setLocale('ua')"
+                           v-html="$t('landing.nav.languages.ua')"></a>
                         <a class='dropdown-item' href='#' @click.prevent="$i18n.setLocale('ru')"
                            v-html="$t('landing.nav.languages.ru')"></a>
                         <a class='dropdown-item' href='#' @click.prevent="$i18n.setLocale('en')"

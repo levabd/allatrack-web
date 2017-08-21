@@ -20,7 +20,6 @@
     "tether": "^1.4.0",
     "vue": "^2.3.3",
     "vue-i18n": "^7.1.1",
-    "vue-meta": "^1.1.0",
     "vueisotope": "^3.1.0"
   },
   "devDependencies": {

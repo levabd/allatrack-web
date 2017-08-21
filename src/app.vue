@@ -10,8 +10,7 @@
   import './assets/css/main.css'
 
   export default {
-    name: 'app',
-    metaInfo: require('./app-meta').default
+    name: 'app'
   }
 </script>
 

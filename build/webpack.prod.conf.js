@@ -4,11 +4,12 @@ var webpack = require('webpack')
 var config = require('../config')
 var merge = require('webpack-merge')
 var baseWebpackConfig = require('./webpack.base.conf')
-// var CopyWebpackPlugin = require('copy-webpack-plugin')
+var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 var PrerenderSpaPlugin = require('prerender-spa-plugin')
+let FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 var env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
@@ -97,13 +98,13 @@ var webpackConfig = merge(baseWebpackConfig, {
       chunks: ['vendor']
     }),
     // copy custom static assets
-    // new CopyWebpackPlugin([
-    //   {
-    //     from: path.resolve(__dirname, '../public'),
-    //     to: config.build.assetsSubDirectory,
-    //     ignore: ['.*']
-    //   }
-    // ]),
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, '../src/assets/img'),
+        to: path.resolve(config.build.assetsSubDirectory, 'img'),
+        ignore: ['.*']
+      }
+    ]),
     new PrerenderSpaPlugin(
       // Absolute path to compiled SPA
       path.join(__dirname, '../'),

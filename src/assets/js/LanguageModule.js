@@ -17,7 +17,6 @@ export default class LanguageModule extends VueI18n {
       lang = navigator.systemLanguage || navigator.language || navigator.userLanguage || 'en'
       console.error('Error while getting country code')
     }
-
     return lang
   }
 
@@ -25,12 +24,12 @@ export default class LanguageModule extends VueI18n {
     if (!_lng) {
       _lng = navigator.systemLanguage || navigator.language || navigator.userLanguage || 'en'
     }
-
+    _lng = _lng.toLowerCase()
     // SNG iso codes
     // Order from TZ
     // ISO Codes from https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
     // | Azerbaijani | Armenian | Belarusian | Kazakh | Kirghiz | Mongolian | Russia | Tajik | Turkmen | Uzbek |
-    const sngIsoCodes = ['az', 'hy', 'be', 'kk', 'ky', 'mn', 'ru-RU', 'ru', 'tg', 'tk', 'uz']
+    const sngIsoCodes = ['az', 'hy', 'be', 'kz', 'ky', 'mn', 'ru-ru', 'ru', 'tg', 'tk', 'uz']
     const allatrackLngCookie = getCookie(LanguageModule.ALLATRACK_LNG_COOKIE)
 
     if (allatrackLngCookie) {
@@ -38,8 +37,8 @@ export default class LanguageModule extends VueI18n {
     } else if (sngIsoCodes.indexOf(_lng) !== -1) {
       _lng = 'ru'
       setCookie(LanguageModule.ALLATRACK_LNG_COOKIE, _lng)
-    } else if (_lng === 'uk') {
-      _lng = 'uk'
+    } else if (_lng === 'ua') {
+      _lng = 'ua'
       setCookie(LanguageModule.ALLATRACK_LNG_COOKIE, _lng)
     } else {
       _lng = 'en'

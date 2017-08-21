@@ -3,6 +3,12 @@ const en = {
   address: '50 Gaydara St. 2-nd porch',
   country_code: 'Kiev 01033 Ukraine',
   landing: {
+    show_all: 'Show all',
+    show_science: 'Data Science',
+    show_medical: 'Medical',
+    show_hardware: 'Hardware',
+    show_mobile: 'Mobile & Web',
+    show_automation: 'ERP & Automation',
     clients: 'Our Clients',
     nav: {
       home: 'Home',
@@ -11,7 +17,7 @@ const en = {
       recommendations: 'Recommendations',
       contact: 'Contact us',
       languages: {
-        uk: 'Укр',
+        ua: 'Укр',
         ru: 'Рус',
         en: 'Eng'
       }
