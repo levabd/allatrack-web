@@ -5,6 +5,8 @@ import App from './app'
 import router from './router'
 import methods from './methods'
 import LanguageModule from '@/assets/js/LanguageModule'
+import * as OfflinePluginRuntime from 'offline-plugin/runtime'
+OfflinePluginRuntime.install()
 
 /* eslint-disable no-new */
 const initApp = (countryCode) => {
