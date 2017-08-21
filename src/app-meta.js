@@ -35,7 +35,7 @@ export default {
   ],
   link: [
     {rel: 'profile', href: '//gmpg.org/xfn/11'},
-    {rel: 'manifest', sizes: '16x16', href: require('./assets/img/manifest.json')},
+    // {rel: 'manifest', sizes: '16x16', href: require('./assets/img/manifest.js').default},
 
     {rel: 'apple-touch-icon', sizes: '57x57', href: require('./assets/img/apple-icon-57x57.png')},
     {rel: 'apple-touch-icon', sizes: '60x60', href: require('./assets/img/apple-icon-60x60.png')},
