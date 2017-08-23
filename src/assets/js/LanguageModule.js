@@ -30,25 +30,43 @@ export default class LanguageModule extends VueI18n {
     // ISO Codes from https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
     // | Azerbaijani | Armenian | Belarusian | Kazakh | Kirghiz | Mongolian | Russia | Tajik | Turkmen | Uzbek |
     const sngIsoCodes = ['az', 'hy', 'be', 'kz', 'ky', 'mn', 'ru-ru', 'ru', 'tg', 'tk', 'uz']
-    const allatrackLngCookie = getCookie(LanguageModule.ALLATRACK_LNG_COOKIE)
+    const localeFromCookie = getCookie(LanguageModule.ALLATRACK_LNG_COOKIE)
 
-    if (allatrackLngCookie) {
-      _lng = allatrackLngCookie
-    } else if (sngIsoCodes.indexOf(_lng) !== -1) {
-      _lng = 'ru'
-      setCookie(LanguageModule.ALLATRACK_LNG_COOKIE, _lng)
-    } else if (_lng === 'ua') {
-      _lng = 'ua'
-      setCookie(LanguageModule.ALLATRACK_LNG_COOKIE, _lng)
-    } else {
-      _lng = 'en'
-      setCookie(LanguageModule.ALLATRACK_LNG_COOKIE, _lng)
+    const getLocaleInUrl = () => {
+      // eslint-disable-next-line
+      const re = /\/(en|ru|ua|az|hy|be|kz|ky|mn|ru-ru|tg|tk|uz)\/?/g
+      const result = re.exec(location.pathname)
+      return result !== null ? result[1] : null
     }
+    const localeFromUrl = getLocaleInUrl()
+
+    if (localeFromUrl) {
+      if (sngIsoCodes.indexOf(localeFromUrl) !== -1) {
+        _lng = 'ru'
+      } else if (localeFromUrl === 'ua') {
+        _lng = 'ua'
+      } else {
+        _lng = 'en'
+      }
+    } else if (localeFromCookie) {
+      _lng = localeFromCookie
+    } else {
+      if (sngIsoCodes.indexOf(_lng) !== -1) {
+        _lng = 'ru'
+      } else if (_lng === 'ua') {
+        _lng = 'ua'
+      } else {
+        _lng = 'en'
+      }
+    }
+    history.pushState({}, null, _lng)
+    setCookie(LanguageModule.ALLATRACK_LNG_COOKIE, _lng)
     return _lng
   }
 
   setLocale (locale = 'en') {
     this.locale = locale
+    history.pushState({}, null, locale)
     setCookie(LanguageModule.ALLATRACK_LNG_COOKIE, locale)
   }
 }

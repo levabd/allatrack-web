@@ -2,6 +2,8 @@
 process.env.NODE_ENV = 'testing'
 var server = require('../../build/dev-server.js')
 
+const chalk = require('chalk')
+
 server.ready.then(() => {
   // 2. run the nightwatch test suite against it
   // to run in additional browsers:
@@ -28,6 +30,7 @@ server.ready.then(() => {
 
   runner.on('error', function (err) {
     server.close()
+    console.log(chalk.cyan('  Error.\n', err))
     throw err
   })
 })
