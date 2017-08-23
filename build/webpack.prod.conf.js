@@ -104,21 +104,6 @@ var webpackConfig = merge(baseWebpackConfig, {
         to: path.resolve(config.build.assetsSubDirectory, 'img'),
         ignore: ['.*']
       },
-      // {
-      //   from: path.resolve(__dirname, '../en'),
-      //   to: path.resolve(config.build.assetsSubDirectory, 'prerendered/en'),
-      //   ignore: ['.*']
-      // },
-      // {
-      //   from: path.resolve(__dirname, '../ru'),
-      //   to: path.resolve(config.build.assetsSubDirectory, 'prerendered/ru'),
-      //   ignore: ['.*']
-      // },
-      // {
-      //   from: path.resolve(__dirname, '../ua'),
-      //   to: path.resolve(config.build.assetsSubDirectory, 'prerendered/ua'),
-      //   ignore: ['.*']
-      // }
     ]),
     new PrerenderSpaPlugin(
       // Absolute path to compiled SPA

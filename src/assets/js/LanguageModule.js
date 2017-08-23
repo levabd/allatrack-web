@@ -59,14 +59,12 @@ export default class LanguageModule extends VueI18n {
         _lng = 'en'
       }
     }
-    history.pushState({}, null, _lng)
     setCookie(LanguageModule.ALLATRACK_LNG_COOKIE, _lng)
     return _lng
   }
 
   setLocale (locale = 'en') {
     this.locale = locale
-    history.pushState({}, null, locale)
     setCookie(LanguageModule.ALLATRACK_LNG_COOKIE, locale)
   }
 }

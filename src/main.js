@@ -14,7 +14,7 @@ const initApp = (countryCode) => {
   Vue.config.productionTip = false
   Vue.use(LanguageModule)
   const initialLocale = LanguageModule.getLangByLogic(countryCode)
-  const router = initRouter(initialLocale)
+  const router = initRouter()
   new Vue({
     el: '#app',
     methods: methods,
