@@ -37,6 +37,10 @@
       return {
         windowHeight: $(window).height()
       }
+    },
+    created () {
+      console.log('created', this.$route.params.lang)
+      this.$i18n.setLocale(this.$route.params.lang)
     }
   }
 </script>

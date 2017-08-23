@@ -2,22 +2,25 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './app'
-import router from './router'
+import initRouter from './router'
 import methods from './methods'
 import LanguageModule from '@/assets/js/LanguageModule'
 import * as OfflinePluginRuntime from 'offline-plugin/runtime'
+
 OfflinePluginRuntime.install()
 
 /* eslint-disable no-new */
 const initApp = (countryCode) => {
   Vue.config.productionTip = false
   Vue.use(LanguageModule)
+  const initialLocale = LanguageModule.getLangByLogic(countryCode)
+  const router = initRouter(initialLocale)
   new Vue({
     el: '#app',
     methods: methods,
     router: router,
     i18n: new LanguageModule({
-      locale: LanguageModule.getLangByLogic(countryCode),
+      locale: initialLocale,
       fallbackLocale: 'en',
       messages: {
         ua: require('@/assets/locales/ua').default,

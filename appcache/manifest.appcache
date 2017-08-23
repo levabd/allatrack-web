@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#ver:2017-8-22 01:07:17
+#ver:2017-8-23 13:14:40
 #plugin:4.8.3
 
 CACHE:
@@ -25,12 +25,12 @@ CACHE:
 /public/img/trackandtrace.0f2b1b4.jpg
 /public/img/ultrasound.32a4474.jpg
 /public/js/vendor.9c5cacd665f2afdf2622.js
-/public/js/app.1244453c93fd50396e7c.js
-/public/js/manifest.15196d1919b932f32021.js
+/public/js/app.89664001e2423a814114.js
+/public/js/manifest.b71260652d60a1a908b7.js
 /public/css/app.dc513ddeec6c849f0dfc3796de50894c.css
 /
-/public/img/agriculture.png
 /public/img/allatrack-logo-trnsprnt-2x.png
+/public/img/agriculture.png
 /public/img/allatrack-logo-trnsprnt.png
 /public/img/android-icon-144x144.png
 /public/img/android-icon-192x192.png
@@ -55,44 +55,44 @@ CACHE:
 /public/img/cars.png
 /public/img/chat-icon.svg
 /public/img/cows.jpg
-/public/img/dniprolab.jpg
 /public/img/drone-traveler.png
+/public/img/dniprolab.jpg
 /public/img/drones.jpg
-/public/img/drones.png
 /public/img/favicon-16x16.png
 /public/img/favicon-32x32.png
-/public/img/favicon.ico
 /public/img/favicon-96x96.png
+/public/img/favicon.ico
+/public/img/drones.png
 /public/img/hepatitis.png
 /public/img/lep.png
-/public/img/logo-ncels.png
 /public/img/logo-dniprolab.png
+/public/img/logo-ncels.png
 /public/img/logo.png
 /public/img/logo114.png
-/public/img/logo32.png
 /public/img/logo192.png
+/public/img/logo32.png
+/public/img/manifest.json
 /public/img/media_system.jpg
+/public/img/media_system.png
+/public/img/mgid-logo.png
 /public/img/mobile-wireframes-old.jpg
-/public/img/mobile-wireframes.jpg
 /public/img/mobile-wireframes-old.png
 /public/img/ms-icon-144x144.png
-/public/img/media_system.png
 /public/img/ms-icon-150x150.png
+/public/img/mobile-wireframes.jpg
+/public/img/ms-icon-310x310.png
 /public/img/ms-icon-70x70.png
+/public/img/ms-logo-white.png
 /public/img/ms-logo.png
 /public/img/ms-partner-logo-white.png
 /public/img/rdc-logo.png
+/public/img/neural-network.jpg
 /public/img/receipts.jpg
 /public/img/Smart4tech-logo.jpg
-/public/img/smartmeter.png
 /public/img/support-icon.svg
+/public/img/smartmeter.png
 /public/img/trackandtrace.jpg
 /public/img/ultrasound.jpg
-/public/img/neural-network.jpg
-/public/img/ms-icon-310x310.png
-/public/img/manifest.json
-/public/img/mgid-logo.png
-/public/img/ms-logo-white.png
 
 NETWORK:
 *
