@@ -3,18 +3,17 @@ import Router from 'vue-router'
 import LandingHome from '@/landing/home'
 
 function initRouter (initialLocale) {
-  console.log('initialLocale', initialLocale)
   Vue.use(Router)
   return new Router({
     mode: 'history',
     routes: [
       {
-        path: '/',
-        redirect: `/${initialLocale}`
+        path: '/:lang',
+        props: {default: initialLocale},
+        redirect: '/'
       },
       {
-        path: '/:lang',
-        props: {default: 'en'},
+        path: '/',
         component: LandingHome
       }
     ]
