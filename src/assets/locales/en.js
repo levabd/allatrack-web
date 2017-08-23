@@ -134,10 +134,10 @@ const en = {
       },
       smartmeter: {
         img: {
-          alt: 'Automation, hardware and Web development'
+          alt: 'The “Smart” accounting of energy resources'
         },
-        title: 'Auction for sales of agricultural products without intermediaries',
-        description: 'The buyer can find a supplier for himself, his shop, restaurant, cafe and other enterprises, and the farmer is able to sell his own products.'
+        title: 'The “Smart” accounting of energy resources',
+        description: 'Accounting devices with bi-directional communication installed on the consumer side..'
       },
       cardio: {
         img: {

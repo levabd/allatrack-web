@@ -109,7 +109,7 @@ var webpackConfig = merge(baseWebpackConfig, {
       // Absolute path to compiled SPA
       path.join(__dirname, '../'),
       // List of routes to prerender
-      ['/ru', '/en', '/ua'],
+      ['/','/ru', '/en', '/ua'],
       {captureAfterTime: 500}
     ),
 
