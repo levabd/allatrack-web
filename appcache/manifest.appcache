@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#ver:2017-8-23 13:31:15
+#ver:2017-8-23 14:18:02
 #plugin:4.8.3
 
 CACHE:
@@ -25,8 +25,8 @@ CACHE:
 /public/img/trackandtrace.0f2b1b4.jpg
 /public/img/ultrasound.32a4474.jpg
 /public/js/vendor.9c5cacd665f2afdf2622.js
-/public/js/app.173ced86d8cad7be4484.js
-/public/js/manifest.b9a8a3a35915b600bd04.js
+/public/js/app.104ea9679b2c94cd0a89.js
+/public/js/manifest.3cec4e4c0acf515db8ea.js
 /public/css/app.dc513ddeec6c849f0dfc3796de50894c.css
 /
 /public/img/agriculture.png
@@ -55,9 +55,10 @@ CACHE:
 /public/img/cars.png
 /public/img/chat-icon.svg
 /public/img/cows.jpg
-/public/img/drone-traveler.png
 /public/img/dniprolab.jpg
+/public/img/drone-traveler.png
 /public/img/drones.jpg
+/public/img/drones.png
 /public/img/favicon-16x16.png
 /public/img/favicon-32x32.png
 /public/img/favicon-96x96.png
@@ -71,7 +72,6 @@ CACHE:
 /public/img/logo192.png
 /public/img/logo32.png
 /public/img/manifest.json
-/public/img/drones.png
 /public/img/media_system.jpg
 /public/img/mgid-logo.png
 /public/img/mobile-wireframes-old.jpg
@@ -84,15 +84,15 @@ CACHE:
 /public/img/ms-logo-white.png
 /public/img/ms-logo.png
 /public/img/ms-partner-logo-white.png
-/public/img/media_system.png
-/public/img/rdc-logo.png
 /public/img/neural-network.jpg
+/public/img/rdc-logo.png
 /public/img/receipts.jpg
 /public/img/Smart4tech-logo.jpg
-/public/img/support-icon.svg
 /public/img/smartmeter.png
-/public/img/ultrasound.jpg
+/public/img/support-icon.svg
 /public/img/trackandtrace.jpg
+/public/img/ultrasound.jpg
+/public/img/media_system.png
 
 NETWORK:
 *
