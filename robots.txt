@@ -1,1 +1,3 @@
-Sitemap: http://allatrack.com/public/sitemap.xml
+User-agent: *
+Disallow:
+Sitemap: http://allatrack.com/sitemap.xml
