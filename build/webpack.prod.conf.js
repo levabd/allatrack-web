@@ -132,7 +132,8 @@ var webpackConfig = merge(baseWebpackConfig, {
           )
         }
       }
-    )
+    ),
+    new OfflinePlugin()
   ]
 })
 

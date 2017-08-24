@@ -5,7 +5,7 @@
             <span class='navbar-toggler-icon'></span>
         </button>
         <a href='#' class='navbar-brand'>
-            <img src='../assets/img/favicon-32x32.webp'
+            <img src='../assets/img/favicon-32x32.png'
                  width='32'
                  height='32'
                  alt="Navbar brand"

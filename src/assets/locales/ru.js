@@ -4,12 +4,6 @@ const ru = {
   country_code: 'Киев 01033, Украина',
   landing: {
     clients: 'Наши клиенты',
-    show_all: 'Показать все',
-    show_science: 'Анализ данных',
-    show_medical: 'Медицина',
-    show_hardware: 'Оборудование',
-    show_mobile: 'Мобильная разработка & Web',
-    show_automation: 'ERP & автоматизация',
     nav: {
       home: 'Домой',
       solutions: 'Решения',
@@ -68,89 +62,120 @@ const ru = {
         description: 'Разрабатываем Веб и Мобильные системы любой сложности'
       }
     },
+    solution_categories: {
+      all: 'Показать все',
+      science: 'Анализ данных',
+      medical: 'Медицина',
+      hardware: 'Оборудование',
+      development: 'Мобильная разработка & Web',
+      automation: 'ERP & автоматизация'
+    },
     solutions: {
-      title: 'Наши решения',
       science: {
         img: {
+          src: require('@/assets/img/anti-bot.jpg'),
           alt: 'Анализ данных и распознавание изображений'
         },
+        category: 'all science',
         title: 'Сервис по анализу рекламных объявлений и детектирование роботов для компании Market Gid',
         description: 'Противодействие фрода и нежелательных объявлений. Проверка кликов и выявление кликов сделанных роботами'
       },
       cars: {
         img: {
+          src: require('@/assets/img/cars.png'),
           alt: 'Компьютерное зрение'
         },
+        category: 'all science',
         title: 'Служба для анализа трафика и обнаружения злоумышленников',
         description: 'Идентификация нарушителей трафика (светофоры, повороты, разметки). Распознавание номера дорожных транспортных средств'
       },
       lep: {
         img: {
+          src: require('@/assets/img/lep.png'),
           alt: 'Разработка программ для оборудования, веб-разработка и компьютерное зрение'
         },
+        category: 'all science hardware',
         title: 'Мониторинг линий электропередач с использованием беспилотных летательных аппаратов',
         description: 'Идентификация физических проблем линий электропередач или колонн с использованием аэрофотосъемки'
       },
       drone_traveler: {
         img: {
+          src: require('@/assets/img/drone-traveler.png'),
           alt: 'Разработка программ для оборудования, веб-разработка и компьютерное зрение'
         },
+        category: 'all science hardware development',
         title: 'Виртуальное путешествие на дронах в режиме реального времени',
         description: 'Позвольте каждому человеку побывать в экзотических уголках мира'
       },
       hepatitis: {
         img: {
+          src: require('@/assets/img/hepatitis.png'),
           alt: 'Медицинское и компьютерное зрение'
         },
+        category: 'all medical science',
         title: 'Контроль качества визуальной диагностики гепатита',
         description: 'В среднем 30% неправильных обследований были обнаружены в результате несоблюдения правил осмотра и ошибки в использовании медицинского оборудования'
       },
       trackandtrace: {
         img: {
+          src: require('@/assets/img/trackandtrace.jpg'),
           alt: 'Автоматизация и веб-разработка'
         },
+        category: 'all medical automation development',
         title: 'Системы прослеживания',
         description: 'Автоматизация маркировки производителя GS1'
       },
       cows: {
         img: {
+          src: require('@/assets/img/cows.jpg'),
           alt: 'Автоматизация и веб-разработка'
         },
+        category: 'all automation development',
         title: 'Контроль за популяцией крупного рогатого скота',
         description: 'Идентификация животных и контроль своевременной вакцинации и взятия проб крови'
       },
       receipts: {
         img: {
+          src: require('@/assets/img/receipts.jpg'),
           alt: 'Автоматизация и веб-разработка'
         },
+        category: 'all automation development',
         title: 'Чековая лотерея',
         description: 'Розыгрыш с использованием фискальных чеков'
       },
       agriculture: {
         img: {
+          src: require('@/assets/img/agriculture.png'),
           alt: 'Автоматизация и веб-разработка'
         },
+        category: 'all automation development',
         title: 'Аукцион по продаже сельскохозяйственной продукции без посредников',
         description: 'Покупатель может найти поставщика для себя, своего магазина, ресторана, кафе и других предприятий, а фермер может продавать собственные продукты'
       },
       smartmeter: {
         img: {
+          src: require('@/assets/img/smartmeter.png'),
           alt: '«Умный» учет энергоресурсов'
         },
+        category: 'all automation hardware development',
         title: '«Умный» учет энергоресурсов',
         description: 'Счетчик с двунаправленной связью, установка на стороне потребителя'
       },
       cardio: {
         img: {
+          src: require('@/assets/img/cardio.png'),
           alt: 'Медицинские, аппаратные и научные исследования'
         },
+        category: 'all medical science hardware',
         title: 'Портативный кардиомонитор',
         description: 'Непрерывный мониторинг сердечной деятельности у себя дома'
       },
       ultrasound: {
         img: {
+          src: require('@/assets/img/ultrasound.jpg'),
           alt: 'Медицинские, аппаратные и научные исследования'
         },
+        category: 'all medical science hardware',
         title: 'Портативный УЗИ аппарат',
         description: 'Портативный многофункциональный датчик с возможностью подключения к смартфону (iOS или Android) с помощью разъема типа USB'
       }

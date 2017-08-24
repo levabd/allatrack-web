@@ -197,20 +197,20 @@
         list: [
           {
             img: {
-              src: require('@/assets/img/media_system.webp'),
+              src: require('../assets/img/media_system.jpg'),
               alt: 'landing.recommendations.media_system.img.alt'
             },
             title: 'landing.recommendations.media_system.title',
-            logo: require('@/assets/img/ms-partner-logo-white.webp'),
+            logo: require('../assets/img/ms-partner-logo-white.png'),
             bailiwick: 'Web development'
           },
           {
             img: {
-              src: require('@/assets/img/dniprolab.webp'),
+              src: require('../assets/img/dniprolab.jpg'),
               alt: 'landing.recommendations.dniprolab.img.alt'
             },
             title: 'landing.recommendations.dniprolab.title',
-            logo: require('@/assets/img/logo-dniprolab.webp'),
+            logo: require('../assets/img/logo-dniprolab.png'),
             bailiwick: 'Web development'
           }
         ],
