@@ -6,7 +6,6 @@ import initRouter from './router'
 import methods from './methods'
 import LanguageModule from '@/assets/js/LanguageModule'
 import * as OfflinePluginRuntime from 'offline-plugin/runtime'
-
 OfflinePluginRuntime.install()
 
 /* eslint-disable no-new */
@@ -28,6 +27,9 @@ const initApp = (countryCode) => {
         en: require('@/assets/locales/en').default
       }
     }),
+    mounted () {
+      this.$el.style.display = 'block'
+    },
     render: h => h(App)
   })
 }

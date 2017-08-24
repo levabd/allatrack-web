@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>http://allatrack.com/public/prerendered/en</loc>
-		<lastmod>2017-08-23</lastmod>
+        <lastmod>2017-08-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1</priority>
     </url>
     <url>
         <loc>http://allatrack.com/public/prerendered/ru</loc>
-		<lastmod>2017-08-23</lastmod>
+        <lastmod>2017-08-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1</priority>
     </url>
     <url>
         <loc>http://allatrack.com/public/prerendered/ua</loc>
-		<lastmod>2017-08-23</lastmod>
+        <lastmod>2017-08-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1</priority>
     </url>

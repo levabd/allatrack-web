@@ -5,7 +5,7 @@
                    name="name"
                    class="contact-name form-control input-lg"
                    :placeholder="$t('landing.contact_form.inputs.name')"
-                   id="contact-name"
+                   :id="'contact-name-' +id"
                    v-model="name">
         </div>
         <div class="form-group">
@@ -13,7 +13,7 @@
                    name="email"
                    class="contact-email form-control input-lg"
                    :placeholder="$t('landing.contact_form.inputs.email')"
-                   id="contact-email"
+                   :id="'contact-email-' +id"
                    v-model="email">
         </div>
         <div class="form-group">
@@ -21,7 +21,7 @@
                       class="contact-message form-control input-lg"
                       rows="4"
                       :placeholder="$t('landing.contact_form.inputs.message')"
-                      id="contact-message"
+                      :id="'contact-message-' +id"
                       v-model="message">
             </textarea>
         </div>

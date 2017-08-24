@@ -43,7 +43,8 @@ var webpackConfig = merge(baseWebpackConfig, {
     }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
-        warnings: false
+        warnings: false,
+        drop_console: true
       },
       sourceMap: false
     }),
@@ -110,11 +111,29 @@ var webpackConfig = merge(baseWebpackConfig, {
       path.join(__dirname, '../'),
       // List of routes to prerender
       ['/','/ru', '/en', '/ua'],
-      {captureAfterTime: 500}
+      {
+        captureAfterTime: 500,
+        postProcessHtml: function (context) {
+          /**
+           * This is a problem: when you prerender content -
+           * it is shown for a few milliseconds on production
+           * So by default on production we assume that app block
+           * has 'display' style option equal to 'none' (we set it
+           * here in this postProcessHtml method actually)
+           * and after element id mounted - we set 'display' to 'block' here src/main.js:32
+           *
+           * This allow as to do both - provide content to
+           * Search engines and disallow to showing
+           * unnecessary content while page loading on production
+           */
+          return context.html.replace(
+            /<div id="app" style="display: block;">/i,
+            '<div id="app" style="display: none;">'
+          )
+        }
+      }
     ),
-
-    new OfflinePlugin(),
-
+    new OfflinePlugin()
   ]
 })
 

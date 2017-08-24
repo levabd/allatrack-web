@@ -8,6 +8,7 @@
             <img src='../assets/img/favicon-32x32.png'
                  width='32'
                  height='32'
+                 alt="Navbar brand"
                  class='d-inline-block'/>
             Allatrack
         </a>
@@ -52,13 +53,13 @@
 
             <ul class='nav navbar-nav navbar-toggler-right socials'>
                 <li>
-                    <a href='//www.facebook.com/allatrack/' class='nav-item'>
+                    <a href='//www.facebook.com/allatrack/' target="_blank" class='nav-item'>
                         <span class='fa-stack'>
                             <i class='fa fa-circle fa-stack-2x text-primary'></i>
                             <i class='fa fa-facebook fa-stack-1x fa-inverse'></i>
                         </span>
                     </a>
-                    <a href='//www.linkedin.com/company/allatrack-it' class='nav-item'>
+                    <a href='//www.linkedin.com/company/allatrack-it' target="_blank" class='nav-item'>
                         <span class='fa-stack'>
                             <i class='fa fa-circle fa-stack-2x text-primary'></i>
                             <i class='fa fa-linkedin fa-stack-1x fa-inverse'></i>
