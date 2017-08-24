@@ -13,6 +13,21 @@ function initRouter (initialLocale) {
         redirect: '/'
       },
       {
+        path: '/public/prerendered/en',
+        props: {default: initialLocale},
+        redirect: '/'
+      },
+      {
+        path: '/public/prerendered/ru',
+        props: {default: initialLocale},
+        redirect: '/'
+      },
+      {
+        path: '/public/prerendered/ua',
+        props: {default: initialLocale},
+        redirect: '/'
+      },
+      {
         path: '/',
         component: LandingHome
       }

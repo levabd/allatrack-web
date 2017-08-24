@@ -55,90 +55,91 @@
 </template>
 <script>
   import isotope from 'vueisotope'
+
   export default {
     data () {
       return {
         list: [
           {
             img: {
-              src: require('@/assets/img/anti-bot.jpg')
+              src: require('@/assets/img/anti-bot.webp')
             },
             path: 'science',
             category: 'science'
           },
           {
             img: {
-              src: require('@/assets/img/cars.png')
+              src: require('@/assets/img/cars.webp')
             },
             path: 'cars',
             category: 'science'
           },
           {
             img: {
-              src: require('@/assets/img/lep.png')
+              src: require('@/assets/img/lep.webp')
             },
             path: 'lep',
             category: 'science hardware'
           },
           {
             img: {
-              src: require('@/assets/img/drone-traveler.png')
+              src: require('@/assets/img/drone-traveler.webp')
             },
             path: 'drone_traveler',
             category: 'science hardware development'
           },
           {
             img: {
-              src: require('@/assets/img/hepatitis.png')
+              src: require('@/assets/img/hepatitis.webp')
             },
             path: 'hepatitis',
             category: 'medical science'
           },
           {
             img: {
-              src: require('@/assets/img/trackandtrace.jpg')
+              src: require('@/assets/img/trackandtrace.webp')
             },
             path: 'trackandtrace',
             category: 'medical automation development'
           },
           {
             img: {
-              src: require('@/assets/img/cows.jpg')
+              src: require('@/assets/img/cows.webp')
             },
             path: 'cows',
             category: 'automation development'
           },
           {
             img: {
-              src: require('@/assets/img/receipts.jpg')
+              src: require('@/assets/img/receipts.webp')
             },
             path: 'receipts',
             category: 'automation development'
           },
           {
             img: {
-              src: require('@/assets/img/agriculture.png')
+              src: require('@/assets/img/agriculture.webp')
             },
             path: 'agriculture',
             category: 'automation development'
           },
           {
             img: {
-              src: require('@/assets/img/smartmeter.png')
+              src: require('@/assets/img/smartmeter.webp')
             },
             path: 'smartmeter',
             category: 'automation hardware development'
           },
           {
             img: {
-              src: require('@/assets/img/cardio.png')
+              src: require('@/assets/img/cardio.webp')
             },
             path: 'cardio',
             category: 'medical science hardware'
           },
           {
             img: {
-              src: require('@/assets/img/ultrasound.jpg')
+              src: require('@/assets/img/ultrasound.webp')
             },
             path: 'ultrasound',
             category: 'medical science hardware'

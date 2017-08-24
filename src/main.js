@@ -28,6 +28,9 @@ const initApp = (countryCode) => {
         en: require('@/assets/locales/en').default
       }
     }),
+    mounted () {
+      this.$el.style.display = 'block'
+    },
     render: h => h(App)
   })
 }

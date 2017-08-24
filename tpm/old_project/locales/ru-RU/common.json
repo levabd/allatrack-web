@@ -1,0 +1,24 @@
+{
+  "nav": {
+    "home": "Home",
+    "solutions": "Solutions",
+    "clients": "Our partners",
+    "contact": "Contact us",
+    "language": "Язык",
+    "languages": {
+      "uk": "Укр",
+      "ru": "Рус",
+      "en": "Eng"
+    }
+  },
+  "contact_form": {
+    "title": "Напишите нам",
+    "description": "Появились вопросы? Напишите нам.",
+    "inputs": {
+      "name": "Имя *",
+      "email": "Email или телефон *",
+      "message": "Вопрос *"
+    },
+    "send": "Отправить"
+  }
+}

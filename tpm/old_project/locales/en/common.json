@@ -1,0 +1,28 @@
+{
+    "nav":{
+        "home":"Home",
+        "solutions":"Solutions",
+        "clients":"Our partners",
+        "contact":"Contact us",
+        "language":"Language",
+        "languages":{
+            "uk": "Укр",
+            "ru": "Рус",
+            "en": "Eng"
+        }
+    },
+    "services":{
+      "title":"Our Services",
+      "title":"Our Services",
+    },
+    "contact_form":{
+        "title": "Contact us",
+        "description": "Have any questions? Send us a message.",
+        "inputs": {
+            "name": "Name *",
+            "email": "Email or phone number *",
+            "message": "Message *"
+        },
+        "send": "Send"
+    }
+}

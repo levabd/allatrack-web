@@ -14,7 +14,7 @@ describe('Allatrack i18n module', () => {
     expect(LanguageModule.getLangByLogic()).to.equal(lng.substring(0, 2))
   })
   it('Module method getLangByLogic returns ru if sng iso code given', () => {
-    const sngIsoCodes = ['az', 'hy', 'be', 'kk', 'ky', 'mn', 'ru-RU', 'ru', 'tg', 'tk', 'uz']
+    const sngIsoCodes = ['az', 'hy', 'be', 'kz', 'ky', 'mn', 'ru', 'tg', 'tk', 'uz']
     sngIsoCodes.forEach(code => {
       deleteCookie(LanguageModule.ALLATRACK_LNG_COOKIE)
       expect(LanguageModule.getLangByLogic(code)).to.equal('ru')

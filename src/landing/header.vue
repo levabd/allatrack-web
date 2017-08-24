@@ -6,11 +6,11 @@
                 <li data-target='#carouselIndicators' data-slide-to='1'></li>
                 <li data-target='#carouselIndicators' data-slide-to='2'></li>
             </ol>
-            <div class='carousel-inner' role='listbox'>
+            <div class='carousel-inner'>
                 <div class='carousel-item active'>
-                    <img class='d-block img-fluid' src='../assets/img/neural-network.jpg' alt='First slide'>
+                    <img class='d-block img-fluid' src='../assets/img/neural-network.webp' alt='First slide'>
                     <div class='carousel-caption'>
-                        <img class='shadowed' src='../assets/img/allatrack-logo-trnsprnt.png' alt='Allatrack'>
+                        <img class='shadowed' src='../assets/img/allatrack-logo-trnsprnt.webp' alt='Allatrack'>
                         <h3 class='company-name'>Allatrack</h3>
                         <h3 class='caption-h3'
                             data-animation='animated bounceInLeft'
@@ -31,9 +31,9 @@
                     </div>
                 </div>
                 <div class='carousel-item'>
-                    <img class='d-block img-fluid' src='../assets/img/drones.jpg' alt='Second slide'>
+                    <img class='d-block img-fluid' src='../assets/img/drones.webp' alt='Second slide'>
                     <div class='carousel-caption'>
-                        <img class='shadowed' src='../assets/img/allatrack-logo-trnsprnt.png' alt='Allatrack'>
+                        <img class='shadowed' src='../assets/img/allatrack-logo-trnsprnt.webp' alt='Allatrack'>
                         <h3 class='company-name'>Allatrack</h3>
                         <h3 class='caption-h3'
                             data-animation='animated lightSpeedIn'
@@ -54,9 +54,9 @@
                     </div>
                 </div>
                 <div class='carousel-item'>
-                    <img class='d-block img-fluid' src='../assets/img/mobile-wireframes.jpg' alt='Third slide'>
+                    <img class='d-block img-fluid' src='../assets/img/mobile-wireframes.webp' alt='Third slide'>
                     <div class='carousel-caption'>
-                        <img class='shadowed' src='../assets/img/allatrack-logo-trnsprnt.png' alt='Allatrack'>
+                        <img class='shadowed' src='../assets/img/allatrack-logo-trnsprnt.webp' alt='Allatrack'>
                         <h3 class='company-name'>Allatrack</h3>
                         <h3 class='caption-h3'
                             data-animation='animated flipInX'

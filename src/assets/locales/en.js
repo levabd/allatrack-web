@@ -35,15 +35,15 @@ const en = {
     header: {
       science: {
         title: 'Data analysis and Hi-end computer vision',
-        description: 'Our consultancy and training solutions combine innovation and experience to unlock the business benefits of machine learning. '
+        description: 'Our consultancy and training solutions combine innovation and experience to unlock the business benefits of machine learning'
       },
       hardware: {
         title: 'Hardware integrations',
-        description: 'Automate and integrate your equipment into a convenient IT system.'
+        description: 'Automate and integrate your equipment into a convenient IT system'
       },
       web: {
         title: 'Mobile & Web',
-        description: 'We can build any Web and Mobile application for you.'
+        description: 'We can build any Web and Mobile application for you'
       },
       previous: 'Previous',
       next: 'Next'
@@ -56,15 +56,15 @@ const en = {
       },
       science: {
         title: 'Data analysis',
-        description: 'Our consultancy and training solutions combine innovation and experience to unlock the business benefits of machine learning.'
+        description: 'Our consultancy and training solutions combine innovation and experience to unlock the business benefits of machine learning'
       },
       hardware: {
         title: 'Hardware',
-        description: 'We develop IT systems for medical equipment. Automate and integrate your equipment into a convenient IT system.'
+        description: 'We develop IT systems for medical equipment. Automate and integrate your equipment into a convenient IT system'
       },
       web: {
         title: 'Mobile & Web development',
-        description: 'We can build any Web and Mobile application for you.'
+        description: 'We can build any Web and Mobile application for you'
       }
     },
     solutions: {
@@ -73,15 +73,15 @@ const en = {
         img: {
           alt: 'Data analysis and image recognition'
         },
-        title: 'Service for the forecasting of the advertising company and anti-fraud system for the advertising agency Market Gid',
-        description: 'Counteraction to unwanted ads. Selecting the best ads based on user behavior'
+        title: 'Analysis of advertisements and robots detection for Marketgid',
+        description: 'Counteraction fraud and unwanted ads. Checking clicks and identifying clicks made by bots'
       },
       cars: {
         img: {
           alt: 'Computer vision'
         },
         title: 'Service for the analysis of traffic and detection of intruders',
-        description: 'Identification of traffic violators (traffic lights, turns, violators markup). Recognition of the road vehicles plates number.'
+        description: 'Identification of traffic violators (traffic lights, turns, violators markup). Recognition of the road vehicles plates number'
       },
       lep: {
         img: {
@@ -102,7 +102,7 @@ const en = {
           alt: 'Medical and computer vision'
         },
         title: 'Quality control of visual diagnostics of hepatitis',
-        description: 'An average of 30% of incorrect surveys were detected as a result of not  following the inspection rules and making an error in the use of medicalequipment'
+        description: 'An average of 30% of incorrect surveys were detected as a result of not  following the inspection rules and making an error in the use of medical equipment'
       },
       trackandtrace: {
         img: {
@@ -130,28 +130,28 @@ const en = {
           alt: 'Automation and Web development'
         },
         title: 'Auction for sales of agricultural products without intermediaries',
-        description: 'The buyer can find a supplier for himself, his shop, restaurant, cafe and other enterprises, and the farmer is able to sell his own products.'
+        description: 'The buyer can find a supplier for himself, his shop, restaurant, cafe and other enterprises, and the farmer is able to sell his own products'
       },
       smartmeter: {
         img: {
           alt: 'The “Smart” accounting of energy resources'
         },
         title: 'The “Smart” accounting of energy resources',
-        description: 'Accounting devices with bi-directional communication installed on the consumer side..'
+        description: 'Accounting devices with bi-directional communication installed on the consumer side'
       },
       cardio: {
         img: {
           alt: 'Medical, hardware and data science'
         },
         title: 'Portable Cardiomnitor',
-        description: 'Continuous monitoring of cardiac activity at home.'
+        description: 'Continuous monitoring of cardiac activity at home'
       },
       ultrasound: {
         img: {
           alt: 'Medical, hardware and data science'
         },
         title: 'Portable ultrasound machine',
-        description: 'Portable multi-purpose sensor with the ability to connect to a smartphone (iOS or Android) by USB type C connector.'
+        description: 'Portable multi-purpose sensor with the ability to connect to a smartphone (iOS or Android) by USB type C connector'
       }
     },
     recommendations: {
