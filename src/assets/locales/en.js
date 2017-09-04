@@ -77,8 +77,26 @@ const en = {
           alt: 'Data analysis and image recognition'
         },
         category: 'all science',
-        title: 'Analysis of advertisements and robots detection for Marketgid',
-        description: 'Counteraction fraud and unwanted ads. Checking clicks and identifying clicks made by bots'
+        title: 'Bot detection by http request headers',
+        description: 'Machine Learning to bot detection by http request headers to prevent fraud'
+      },
+      duplicate: {
+        img: {
+          src: require('@/assets/img/duplicate.png'),
+          alt: 'Data analysis and image recognition'
+        },
+        category: 'all science',
+        title: 'Duplicate images in advertisements detection for MarketGid',
+        description: 'Image similarity analysis allows you to hide identic banners on the page'
+      },
+      duplication: {
+        img: {
+          src: require('@/assets/img/duplicate-some.png'),
+          alt: 'Data analysis and image recognition'
+        },
+        category: 'all science',
+        title: 'Image indexing and search engine',
+        description: 'Indexing images using SURF and 3-dimensional histograms'
       },
       cars: {
         img: {
@@ -89,23 +107,23 @@ const en = {
         title: 'Service for the analysis of traffic and detection of intruders',
         description: 'Identification of traffic violators (traffic lights, turns, violators markup). Recognition of the road vehicles plates number'
       },
-      lep: {
+      traffic: {
         img: {
-          src: require('@/assets/img/lep.png'),
-          alt: 'Hardware, Web development and computer vision'
+          src: require('@/assets/img/way.png'),
+          alt: 'Computer vision'
         },
-        title: 'Monitoring of power lines using unmanned aerial vehicles',
-        description: 'Identification of physical problems with pillar or power lines using aerial photography',
-        category: 'all science hardware'
+        category: 'all science',
+        title: 'Traffic congestion calculating',
+        description: 'Calculation using computer vision and web cameras'
       },
-      drone_traveler: {
+      employees: {
         img: {
-          src: require('@/assets/img/drone-traveler.png'),
-          alt: 'Hardware, Web development and computer vision'
+          src: require('@/assets/img/cars-nombers.png'),
+          alt: 'Computer vision'
         },
-        category: 'all science hardware development',
-        title: 'Virtual travel on drones in real time',
-        description: 'Allow each person to experience the exotic corners of the world'
+        category: 'all science',
+        title: 'Recognition of the employees cars on parking lots',
+        description: 'Using Haar cascades, SVM and HOG descriptors'
       },
       hepatitis: {
         img: {
@@ -113,8 +131,8 @@ const en = {
           alt: 'Medical and computer vision'
         },
         category: 'all medical science',
-        title: 'Quality control of visual diagnostics of hepatitis',
-        description: 'An average of 30% of incorrect surveys were detected as a result of not  following the inspection rules and making an error in the use of medical equipment'
+        title: 'Medical diagnostics quality control',
+        description: 'Using image processing and machine learning we improve patient diagnosis up to 30% better than physicians'
       },
       trackandtrace: {
         img: {
@@ -140,8 +158,8 @@ const en = {
           alt: 'Automation and Web development'
         },
         category: 'all automation development',
-        title: 'Receipts lottery',
-        description: 'Competition based on fiscal receipts'
+        title: 'Receipt lottery (competition nased on fiscal checks)',
+        description: 'Lottery receipts recognition'
       },
       agriculture: {
         img: {
@@ -178,6 +196,33 @@ const en = {
         category: 'all medical science hardware',
         title: 'Portable ultrasound machine',
         description: 'Portable multi-purpose sensor with the ability to connect to a smartphone (iOS or Android) by USB type C connector'
+      },
+      visualeffect: {
+        img: {
+          src: require('@/assets/img/long-exposure.png'),
+          alt: 'Computer vision'
+        },
+        category: 'all science',
+        title: 'Microservice for long exposure visual effect by the video',
+        description: 'Some camera and Photoshop effects emulation'
+      },
+      gaussian: {
+        img: {
+          src: require('@/assets/img/number.png'),
+          alt: 'Computer vision'
+        },
+        category: 'all science',
+        title: 'Highly noised text recognition',
+        description: 'Highly noised(Gaussian noise) text recognition using contour analysis'
+      },
+      exchange: {
+        img: {
+          src: require('@/assets/img/forecast_example.png'),
+          alt: 'Computer vision'
+        },
+        category: 'all science',
+        title: 'Exchange rate forecasting',
+        description: 'Currency fluctuations forecasting with Prophet'
       }
     },
     recommendations: {
@@ -198,6 +243,15 @@ const en = {
         logo: require('@/assets/img/logo-dniprolab.png'),
         title: 'Dneprolab medical laboratories',
         bailiwick: 'Web development'
+      },
+      mgid: {
+        img: {
+          src: require('@/assets/img/mgid-letter.jpg'),
+          alt: 'Market Gid'
+        },
+        logo: require('@/assets/img/mgid-logo.png'),
+        bailiwick: 'Machine learning',
+        title: 'Market Gid'
       }
     }
   }
