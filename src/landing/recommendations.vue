@@ -4,7 +4,7 @@
         <div class="container text-center">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h2 v-html="$t('landing.recommendations.title')"></h2>
+                    <h2 v-html="$t('landing.our_recommendations')"></h2>
                     <hr class="small">
 
                     <isotope ref="cpt" id="root-isotope-recommendations"
@@ -189,31 +189,21 @@
                     </div>`,
           size: 'large'
         })
+      },
+      getList (locale = 'en') {
+        const messages = this.$i18n.getLocaleMessage(locale)['landing']
+        const obj = messages['recommendations']
+        let list = []
+        Object.keys(obj).forEach(e => {
+          list.push(obj[e])
+        })
+        return list
       }
     },
     data () {
       return {
         locale: 'en',
-        list: [
-          {
-            img: {
-              src: require('../assets/img/media_system.jpg'),
-              alt: 'landing.recommendations.media_system.img.alt'
-            },
-            title: 'landing.recommendations.media_system.title',
-            logo: require('../assets/img/ms-partner-logo-white.png'),
-            bailiwick: 'Web development'
-          },
-          {
-            img: {
-              src: require('../assets/img/dniprolab.jpg'),
-              alt: 'landing.recommendations.dniprolab.img.alt'
-            },
-            title: 'landing.recommendations.dniprolab.title',
-            logo: require('../assets/img/logo-dniprolab.png'),
-            bailiwick: 'Web development'
-          }
-        ],
+        list: this.getList(this.$i18n.locale),
         currentLayout: 'masonry',
         selected: 'Show all',
         sortOption: 'original-order',
@@ -231,6 +221,11 @@
             }
           }
         }
+      }
+    },
+    watch: {
+      '$i18n.locale': function (_new) {
+        this.$set(this, 'list', this.getList(_new))
       }
     },
     components: {

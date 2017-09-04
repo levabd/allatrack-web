@@ -4,6 +4,7 @@ const ru = {
   country_code: 'Киев 01033, Украина',
   landing: {
     clients: 'Наши клиенты',
+    our_recommendations: 'Нас рекомендуют',
     nav: {
       home: 'Домой',
       solutions: 'Решения',
@@ -181,17 +182,22 @@ const ru = {
       }
     },
     recommendations: {
-      title: 'Нас рекомендуют',
       media_system: {
         img: {
+          src: require('@/assets/img/media_system.jpg'),
           alt: 'MS Smart group'
         },
+        bailiwick: 'Web разработка',
+        logo: require('@/assets/img/ms-partner-logo-white.png'),
         title: 'MS Smart group'
       },
       dniprolab: {
         img: {
+          src: require('@/assets/img/dniprolab.jpg'),
           alt: 'Медицинская лаборатория Днепролаб'
         },
+        logo: require('@/assets/img/logo-dniprolab.png'),
+        bailiwick: 'Web разработка',
         title: 'Медицинская лаборатория Днепролаб'
       }
     }

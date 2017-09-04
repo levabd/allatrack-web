@@ -4,6 +4,7 @@ const ua = {
   country_code: 'Київ 01033, Україна',
   landing: {
     clients: 'Наші клієнти',
+    our_recommendations: 'Нас рекомендують',
     nav: {
       home: 'Додому',
       solutions: 'Наші рішення',
@@ -181,17 +182,22 @@ const ua = {
       }
     },
     recommendations: {
-      title: 'Нас рекомендують',
       media_system: {
         img: {
+          src: require('@/assets/img/media_system.jpg'),
           alt: 'MS Smart group'
         },
+        logo: require('@/assets/img/ms-partner-logo-white.png'),
+        bailiwick: 'Web розробка',
         title: 'MS Smart group'
       },
       dniprolab: {
         img: {
+          src: require('@/assets/img/dniprolab.jpg'),
           alt: 'Медична лабораторія Дніпролаб'
         },
+        logo: require('@/assets/img/logo-dniprolab.png'),
+        bailiwick: 'Web розробка',
         title: 'Медична лабораторія Дніпролаб'
       }
     }

@@ -4,6 +4,7 @@ const en = {
   country_code: 'Kiev 01033 Ukraine',
   landing: {
     clients: 'Our Clients',
+    our_recommendations: 'Our Recommendations',
     nav: {
       home: 'Home',
       solutions: 'Solutions',
@@ -180,18 +181,23 @@ const en = {
       }
     },
     recommendations: {
-      title: 'Our Recommendations',
       media_system: {
         img: {
+          src: require('@/assets/img/media_system.jpg'),
           alt: 'MS Smart group'
         },
-        title: 'MS Smart group'
+        logo: require('@/assets/img/ms-partner-logo-white.png'),
+        title: 'MS Smart group',
+        bailiwick: 'Web development'
       },
       dniprolab: {
         img: {
+          src: require('@/assets/img/dniprolab.jpg'),
           alt: 'Dneprolab medical laboratories'
         },
-        title: 'Dneprolab medical laboratories'
+        logo: require('@/assets/img/logo-dniprolab.png'),
+        title: 'Dneprolab medical laboratories',
+        bailiwick: 'Web development'
       }
     }
   }

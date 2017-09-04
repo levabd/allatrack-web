@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#ver:2017-8-24 19:39:10
+#ver:2017-9-4 16:28:43
 #plugin:4.8.3
 
 CACHE:
@@ -12,21 +12,21 @@ CACHE:
 /public/img/cardio.e16c27c.png
 /public/img/cars.c2d247b.png
 /public/img/cows.53154e0.jpg
+/public/img/dniprolab.48f93ea.jpg
 /public/img/drone-traveler.6dcd4e9.png
 /public/img/hepatitis.d4e1c5f.png
 /public/img/lep.4b67fdf.png
+/public/img/media_system.ebd9a74.jpg
 /public/img/receipts.145708e.jpg
 /public/img/smartmeter.990ba3f.png
 /public/img/trackandtrace.0f2b1b4.jpg
 /public/img/ultrasound.32a4474.jpg
-/public/img/dniprolab.48f93ea.jpg
 /public/img/drones.5b585db.png
-/public/img/media_system.ebd9a74.jpg
 /public/img/mobile-wireframes.52a469a.jpg
 /public/img/neural-network.74f14ca.jpg
-/public/js/vendor.b7c56a957ac0d3d0b0a3.js
-/public/js/app.e3e42b778de775390ab0.js
-/public/js/manifest.dc82f546f4d0cb908b94.js
+/public/js/vendor.178c3744e6dc8ffa5b0f.js
+/public/js/app.558b477c0ca7737d46f9.js
+/public/js/manifest.2fb660b34671216ec28d.js
 /public/css/app.dc513ddeec6c849f0dfc3796de50894c.css
 /
 /public/img/agriculture.png
@@ -52,13 +52,12 @@ CACHE:
 /public/img/apple-icon.png
 /public/img/atameken-logo.png
 /public/img/cardio.png
-/public/img/cars.png
 /public/img/chat-icon.svg
+/public/img/cars.png
 /public/img/cows.jpg
-/public/img/dniprolab.jpg
 /public/img/drone-traveler.png
+/public/img/dniprolab.jpg
 /public/img/drones.jpg
-/public/img/drones.png
 /public/img/favicon-16x16.png
 /public/img/favicon-32x32.png
 /public/img/favicon-96x96.png
@@ -72,26 +71,27 @@ CACHE:
 /public/img/logo192.png
 /public/img/logo32.png
 /public/img/manifest.json
-/public/img/media_system.jpg
+/public/img/drones.png
 /public/img/mgid-logo.png
+/public/img/media_system.jpg
 /public/img/mobile-wireframes-old.jpg
 /public/img/mobile-wireframes.jpg
 /public/img/ms-icon-144x144.png
 /public/img/ms-icon-150x150.png
-/public/img/mobile-wireframes-old.png
-/public/img/ms-icon-70x70.png
 /public/img/ms-icon-310x310.png
+/public/img/ms-icon-70x70.png
+/public/img/mobile-wireframes-old.png
 /public/img/ms-logo-white.png
 /public/img/ms-partner-logo-white.png
 /public/img/ms-logo.png
 /public/img/rdc-logo.png
+/public/img/receipts.jpg
 /public/img/neural-network.jpg
 /public/img/Smart4tech-logo.jpg
-/public/img/receipts.jpg
 /public/img/support-icon.svg
-/public/img/smartmeter.png
-/public/img/ultrasound.jpg
 /public/img/trackandtrace.jpg
+/public/img/ultrasound.jpg
+/public/img/smartmeter.png
 
 NETWORK:
 *
