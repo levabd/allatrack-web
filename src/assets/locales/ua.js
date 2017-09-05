@@ -250,7 +250,7 @@ const ua = {
           src: require('@/assets/img/mgid-letter.jpg'),
           alt: 'Market Gid'
         },
-        logo: require('@/assets/img/mgid-logo.png'),
+        logo: require('@/assets/img/mgid-logo-long.png'),
         bailiwick: 'Машинне навчання',
         title: 'Market Gid'
       }

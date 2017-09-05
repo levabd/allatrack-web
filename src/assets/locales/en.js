@@ -249,7 +249,7 @@ const en = {
           src: require('@/assets/img/mgid-letter.jpg'),
           alt: 'Market Gid'
         },
-        logo: require('@/assets/img/mgid-logo.png'),
+        logo: require('@/assets/img/mgid-logo-long.png'),
         bailiwick: 'Machine learning',
         title: 'Market Gid'
       }

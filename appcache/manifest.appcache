@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#ver:2017-9-4 17:58:52
+#ver:2017-9-5 11:43:40
 #plugin:4.8.3
 
 CACHE:
@@ -21,6 +21,7 @@ CACHE:
 /public/img/long-exposure.d6b48f6.png
 /public/img/media_system.ebd9a74.jpg
 /public/img/mgid-letter.c764ab6.jpg
+/public/img/mgid-logo-long.664fe5d.png
 /public/img/number.5548f07.png
 /public/img/receipts.145708e.jpg
 /public/img/smartmeter.990ba3f.png
@@ -30,16 +31,16 @@ CACHE:
 /public/img/drones.5b585db.png
 /public/img/mobile-wireframes.52a469a.jpg
 /public/img/neural-network.74f14ca.jpg
-/public/js/vendor.3a3f457aa720bf8572bf.js
-/public/js/app.818d80839c7c04b7057f.js
-/public/js/manifest.e062c1252857a8d52866.js
+/public/js/vendor.7a205dfaf7ae421aab66.js
+/public/js/app.d81af9ffa3aca38ba14c.js
+/public/js/manifest.cf4bda9b2b212a7f1af6.js
 /public/css/app.dc513ddeec6c849f0dfc3796de50894c.css
 /
 /public/img/agriculture.png
 /public/img/allatrack-logo-trnsprnt.png
-/public/img/allatrack-logo-trnsprnt-2x.png
-/public/img/android-icon-144x144.png
 /public/img/android-icon-36x36.png
+/public/img/android-icon-144x144.png
+/public/img/allatrack-logo-trnsprnt-2x.png
 /public/img/android-icon-192x192.png
 /public/img/anti-bot.jpg
 /public/img/android-icon-48x48.png
@@ -72,7 +73,6 @@ CACHE:
 /public/img/drone-traveler.png
 /public/img/forecast_example.png
 /public/img/hepatitis.png
-/public/img/http-request.png
 /public/img/logo-dniprolab.png
 /public/img/logo-ncels.png
 /public/img/favicon.ico
@@ -82,14 +82,15 @@ CACHE:
 /public/img/lep.png
 /public/img/media_system.jpg
 /public/img/mgid-letter.jpg
+/public/img/mgid-logo-long.png
 /public/img/mgid-logo.png
+/public/img/logo.png
 /public/img/logo32.png
 /public/img/mobile-wireframes.jpg
 /public/img/manifest.json
 /public/img/ms-icon-144x144.png
-/public/img/drones.jpg
 /public/img/ms-icon-150x150.png
-/public/img/logo.png
+/public/img/drones.jpg
 /public/img/ms-logo.png
 /public/img/ms-partner-logo-white.png
 /public/img/neural-network.jpg
@@ -103,20 +104,10 @@ CACHE:
 /public/img/ultrasound.jpg
 /public/img/way.png
 /public/img/ms-icon-70x70.png
-/public/img/Новая папка (2)/forecast_example.png
-/public/img/ms-logo-white.png
 /public/img/ms-icon-310x310.png
-/public/img/Новая папка (2)/http-request.png
-/public/img/Новая папка (2)/number.png
 /public/img/mobile-wireframes-old.jpg
-/public/img/Новая папка (2)/cars-nombers.png
-/public/img/Новая папка (2)/mgid-logo.png
+/public/img/ms-logo-white.png
 /public/img/mobile-wireframes-old.png
-/public/img/Новая папка (2)/long-exposure.png
-/public/img/Новая папка (2)/way.png
-/public/img/Новая папка (2)/duplicate.png
-/public/img/Новая папка (2)/Новая папка/duplicate.png
-/public/img/Новая папка (2)/Новая папка/duplicate-some.png
 
 NETWORK:
 *
